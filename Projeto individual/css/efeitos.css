@@ -1,0 +1,41 @@
+header .container i{
+    color: white;
+    margin-top: 20px;
+}
+
+
+/* esse é para estilizar o botao do menu */
+
+label #fecha_btn{
+    z-index: 1;
+    color: white;
+    position: fixed;
+    cursor: pointer;
+    font-size: 30px;
+    margin: 15px 0;
+    transition: 0.3s;
+    transition-property: color; 
+    
+}
+
+label #abre_btn{
+    z-index: 1;
+    color: white;
+    position: fixed;
+    cursor: pointer;
+    font-size: 30px;
+    margin: 15px 0;
+    transition: 0.3s;
+    transition-property: color;
+    
+}
+
+/* esse é para mudar a cor do botao do menu ao passar o mouse por cima */
+
+label #aside_btn:hover{
+    color: darkgray;
+}
+
+/* #check:checked {
+    
+} */

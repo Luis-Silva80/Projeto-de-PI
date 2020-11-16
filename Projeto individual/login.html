@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animacoes.css">
+    <link rel="stylesheet" href="./css/login.css">
+
+    <link rel="shortcut icon" href="imgs/cs.ico" type="">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <!-- <label for="">
+                <i onclick="abre_menu()" class="fas fa-bars" id="abre_btn" style="display:none;"></i>
+                <i onclick="fecha_menu()" class="fas fa-times-circle" id="fecha_btn" ></i>
+            </label> -->
+            <img src="imgs/eu.jpg" alt="">
+            <ul class="animate-down">
+                <li class="items"><a href="csgo.html">home</a></li>
+                <li class="items"><a href="times.html">Times</a></li>
+                <li class="current items">login</li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="conteudo">
+        <div class="container">
+            <div class="form">
+                <header>
+                    <h2>Iniciar Sessão</h2>
+                </header>
+                <div class="banner">
+                    <img src="./imgs/Steam.ico" alt="">
+                    <p>STEAM</p>
+                </div>
+                <div class="container">
+                    <form id="form1">
+                        <div class="fullbox">
+                            <label>Nome de Usuário</label>
+                            <input type="text" id="user">
+                        </div>
+                        <div class="fullbox">
+                            <label>Senha</label>
+                            <input type="password" id="senha">
+
+                        </div>
+                    </form>
+                    <div class="acesso">
+                        <div class="main">
+                            <button onclick="mercado()" id="login">Login</button>
+                            <button onclick="limpar()" class="btn2">Limpar</button>
+                        </div>
+                    </div>
+                    <div class="cad">
+                        <button onclick="cadastro()">Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function mercado() {
+        window.location.href = 'mercado.html';
+    }
+
+    function cadastro() {
+        window.location.href = 'cadastro.html';
+    }
+
+    function limpar() {
+        document.getElementById('user').value='';
+        document.getElementById('senha').value='';
+    }
+
+    
+
+</script>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado</title>
+
+    <link rel="stylesheet" href="./css/animacoes.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/efeitos.css">
+    <link rel="stylesheet" href="./css/mercado.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="shortcut icon" href="imgs/cs.ico" type="">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <img onclick="fecha_menu()" class="imgs" src="imgs/icone_fechar.png" alt="" id="fecha_btn">
+            <img onclick="abre_menu()" class="imgs" src="imgs/menu_hamburguer.png" alt="" id="abre_btn">
+
+            <ul class="animate-down">
+                <li class="items"><a href="./login.html">home</a></li>
+                <li class="items"><a href="./times.html">Times</a></li>
+                <li class="items current">Mercado</li>
+                <li class="items"><a href="login.html">login</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <aside id="menu">
+        <h1>Armas</h1>
+        
+        <div class="armas">
+            <img src="imgs/ak47.png" alt="" id="imas">
+            <span id="text">AK-47</span>
+        </div>
+        <div class="armas">
+            <img src="imgs/awp.png" alt="" id="imas">
+            <span id="text2">AWP</span>
+        </div>
+        <div class="armas">
+            <img src="imgs/pistol.png" alt="" id="imas3">
+            <span id="text3">Pistols</span>
+        </div>
+        <div class="armas">
+            <img src="imgs/m4.png" alt="" id="imas4">
+            <span id="text4">M4</span>
+        </div>
+        <div class="armas">
+            <img src="imgs/faca.png" alt="" id="imas5">
+            <span id="text5">Facas</span>
+        </div>
+
+    </aside>
+
+</body>
+
+</html>
+
+<script>
+
+    function fecha_menu() {
+        document.getElementById("menu").style.width = "100px";
+        document.getElementById("abre_btn").style.display = "block";
+        document.getElementById("fecha_btn").style.display = "none";
+        document.getElementById("text").innerHTML = '';
+        document.getElementById("text3").innerHTML = '';
+        document.getElementById("text2").innerHTML = '';
+        document.getElementById("text4").innerHTML = '';
+        document.getElementById("text5").innerHTML = '';
+        document.getElementById("imas").style.width = "100px"
+
+    }
+
+    function abre_menu() {
+        document.getElementById("menu").style.width = "350px";
+        document.getElementById("fecha_btn").style.display = "block";
+        document.getElementById("abre_btn").style.display = "none";
+        document.getElementById("text").innerHTML = 'AK-47';
+        document.getElementById("text2").innerHTML = 'AWP';
+        document.getElementById("text3").innerHTML = 'Pistols';
+        document.getElementById("text4").innerHTML = 'M4';
+        document.getElementById("text5").innerHTML = 'Facas';
+        document.getElementById("imas").style.width = "initial";
+
+    }
+
+
+</script>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Gustavo</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animacoes.css">
+    <link rel="stylesheet" href="./css/times.css">
+
+    <link rel="shortcut icon" href="imgs/cs.ico" type="">
+</head>
+<body onLoad="mibr()">
+    
+    <header class="animate-down">
+
+        <div class="container">
+            <!-- <label for="">
+                <i onclick="abre_menu()" class="fas fa-bars" id="abre_btn" style="display:none;"></i>
+                <i onclick="fecha_menu()" class="fas fa-times-circle" id="fecha_btn" ></i>
+            </label> -->
+            
+            <img src="imgs/eu.jpg" alt="">
+            <ul>
+                <li class="items"><a href="index.html">home</a></li>
+                <li class="current items">Times</li>
+                <li class="items"><a href="./login.html">Mercado</a></li>
+                <li class="items"><a href="login.html">login</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="conteudo">
+        <div class="container" id="container">
+            <p id="nome">MIBR</p>
+            <div class="fotos">
+                <div class="info">
+                    <img src="imgs/log_mibr.jpg" alt="" class="time" id="time">
+                    <p class="times-info" id="times-info">Aqui vai as informações dos times</p>
+                </div>
+                <img src="imgs/line_mibr.jpg" alt="" class="line" id="line">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+           
+            <div class="redes">
+                <a href="https://www.facebook.com/people/Luis-Gustavo"><img src="imgs/facebook.png" alt=""></a>
+                <a href="https://steamcommunity.com/id/Luis-Bombz/"><img src="imgs/steam2.png" alt=""></a>
+                <a href="https://github.com/Luis-Silva80"><img src="imgs/github.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+<script>
+
+    var intervalo = 4500;
+
+    function mibr(){
+        document.getElementById("time").src = "./imgs/log_mibr.jpg";
+        document.getElementById("line").src = "./imgs/line_mibr.jpg";
+        document.getElementById("nome").innerHTML = "MIBR";
+        document.getElementById("times-info").innerHTML = `Line-up: <br>V$M<br>KNG<br>Lucas1<br>Leo_drk<br>TRK`;
+        document.getElementById("container").style.border = "4px white solid";
+        setTimeout("furia()",intervalo);
+    }
+
+    function furia(){
+        document.getElementById("time").src = "./imgs/log_furia.jpg";
+        document.getElementById("line").src = "./imgs/line_furia.jpg";
+        document.getElementById("nome").innerHTML = "FURIA";
+        document.getElementById("times-info").innerHTML = "Line-up:<br>Art<br>Hen1<br>Yuurih<br>Kscerato<br>Vini"
+        document.getElementById("container").style.border = " 4px black solid";
+        setTimeout("robo()",intervalo);
+    }
+
+    function robo(){
+        document.getElementById("time").src = "./imgs/logo_robozao.jpg";
+        document.getElementById("line").src = "./imgs/line_robozao.jpg";
+        document.getElementById("nome").innerHTML = "ASTRALIS";
+        document.getElementById("times-info").innerHTML = "Line-up<br>Gla1ve<br>Magisk<br>Dupreeh<br>Device<br>Xyp9x"
+        document.getElementById("container").style.border = "4px gray solid";
+        setTimeout("faze()",intervalo);
+    
+    }
+
+    function faze(){
+        document.getElementById("time").src = "./imgs/logo_faze.jpg";
+        document.getElementById("line").src = "./imgs/line_faze.jpg";
+        document.getElementById("nome").innerHTML = "FAZE";
+        document.getElementById("times-info").innerHTML = "Line-up:<br>Rain<br>Olofmaister<br>N1ko<br>Coldzera<br>Broky"
+        document.getElementById("container").style.border = "4px red solid";
+        setTimeout("navi()",intervalo);
+    }
+
+    function navi(){
+        document.getElementById("time").src = "./imgs/logo_navi.jpg";
+        document.getElementById("line").src = "./imgs/line_navi.jpg";
+        document.getElementById("nome").innerHTML = "NAVI";
+        document.getElementById("times-info").innerHTML = "Line:<br>Boombl4<br>flamie<br>S1mple<br>electronic<br>Perfecto"
+        document.getElementById("container").style.border = "4px yellow solid";
+        setTimeout("boom()",intervalo);
+    }
+
+    function boom(){
+        document.getElementById("time").src = "./imgs/logo_boom.jpeg";
+        document.getElementById("line").src = "./imgs/line_boom.jpg";
+        document.getElementById("nome").innerHTML = "BOOM";
+        document.getElementById("times-info").innerHTML = "Line-up:<br>Chelo<br>Boltz<br>Yel<br>SHZ<br>Felps"
+        document.getElementById("container").style.border = "4px green solid";
+        setTimeout("g2()",intervalo);
+    }
+
+    function g2(){
+        document.getElementById("time").src = "./imgs/logo_g2.png";
+        document.getElementById("line").src = "./imgs/line_g2.jpg";
+        document.getElementById("nome").innerHTML = "G2";
+        document.getElementById("times-info").innerHTML = "Line-up:<br>Hunter<br>AmaNek<br>KennyS<br>Nexa<br>Shox"
+        document.getElementById("container").style.border = "4px blue solid";
+        setTimeout("mibr()",intervalo);
+    }
+
+
+</script>
