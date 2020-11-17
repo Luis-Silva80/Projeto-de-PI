@@ -5,43 +5,6 @@ body {
     
 }
 
-
-
-/* esse épara estilizar a barra lateral */
-
-/* aside {
-    color: white;
-    width: 350px;
-    background: linear-gradient(329.54deg, red 0%, #000000 100%);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-}
-
-aside h1 {
-    margin-top: 0;
-     font-family: 'Nunito', sans-serif; 
-     margin-top: .01rem; 
-    font: 800 clamp(2rem, 5vw, 3.6rem)/1.1 'Nunito', sans-serif;
-
-}
-
-aside .container {
-    margin-top: 20px;
-    height: 800px;
-    width: 80%;
-    margin: auto;
-    font: 400 clamp(2rem, .7vw, 3.6rem)/1.1 'Nunito', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-} */
-
-/*Fim do aside */
-
 #conteudo {
     width: 100%;
     /* background: url(../imgs/fund.jpg) no-repeat; */
@@ -62,7 +25,7 @@ header {
 
 header .container {
     width: 90%; 
-    height: 150px;
+    height: 120px;
     margin: auto;
     text-align: inherit;
     /* justify-content: center; */
@@ -98,16 +61,6 @@ header ul .items{
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-/* header li {
-    float: left;
-    list-style: none;
-    margin-left: 20px;
-    size: 30px;
-    font-size: 22px;
-    font-family: 'Noto Sans KR', sans-serif;
-
-
-} */
 
 a {
     text-decoration: none;
@@ -121,6 +74,25 @@ a:hover {
     color: white;
     cursor: pointer;
     text-decoration: none;
+}
+
+.box-video{
+    width: 100%;
+    height:auto;
+    background: url(../imgs/fundo.png) no-repeat center fixed;
+}
+
+.box-video h1{
+    padding-top: 10px;
+    font-family: 'CSGO';
+    font-size: 40px;
+    color: white;
+    margin: 0 980px;
+}
+
+.box-video iframe{
+    /* padding-top: 10px; */
+    margin-left: 700px;
 }
 
 .box {
@@ -236,6 +208,6 @@ footer .container .redes{
     width: 200px;
     height: 100px;
     background-color: white;
-    border-radius: 100%;
+    border-radius: 5%;
     margin: 20px 70px;
 }

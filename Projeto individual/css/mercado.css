@@ -1,19 +1,19 @@
 body{
     margin: 0;
     padding: 0;
-
     background: none;
 }
 
 aside {
     color: white;
-    width: 350px;
-    background: linear-gradient(329.54deg, red 0%, #000000 100%);
+    width: 20%;
+    background: linear-gradient(329.54deg,red 20%,  black 80%);
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     transition-duration: 400ms;
+    float: left;
 
 }
 
@@ -57,4 +57,37 @@ aside a{
 .armas span{
     font-size: 20px;
     font-family:'Noto Sans KR', sans-serif;
+}
+
+/* FIM DO ASIDE */
+
+
+.box-menu{
+    width: 80%;
+    height: 100vh;
+    background-color: blue;
+    float: left;
+    transition-duration: 400ms;
+}
+
+.box-menu .cont {
+    width: 80%;
+    margin: 10px auto;
+    height: 90vh;
+    background-color: burlywood;
+    
+}
+
+.box-menu .cont h2{
+    padding-top: 30px;
+}
+
+.box-menu .cont .item{
+    display: flex;
+}
+
+.box-menu .cont .item #imgs{
+    width: 200px;
+    height: 500px;
+    background-color: chartreuse;
 }
