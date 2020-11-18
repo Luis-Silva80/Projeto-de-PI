@@ -33,24 +33,24 @@
 
     <aside id="menu">
         <h1>Armas</h1>
-        
-        <div class="armas">
+
+        <div class="armas" onclick="ak()">
             <img src="imgs/ak47.png" alt="" id="imas">
             <span id="text">AK-47</span>
         </div>
-        <div class="armas">
+        <div class="armas" onclick="awp()">
             <img src="imgs/awp.png" alt="" id="imas">
             <span id="text2">AWP</span>
         </div>
-        <div class="armas">
+        <div class="armas" onclick="pistol()">
             <img src="imgs/pistol.png" alt="" id="imas3">
             <span id="text3">Pistols</span>
         </div>
-        <div class="armas">
+        <div class="armas" onclick="m4()">
             <img src="imgs/m4.png" alt="" id="imas4">
             <span id="text4">M4</span>
         </div>
-        <div class="armas">
+        <div class="armas" onclick="faca()">
             <img src="imgs/faca.png" alt="" id="imas5">
             <span id="text5">Facas</span>
         </div>
@@ -59,13 +59,60 @@
 
     <div class="box-menu" id="box-menu">
         <div class="cont">
-            <h2>Titulo da Arma</h2>
-            <div class="item">
-                <p>Especificações das armas</p>
-                <img src="" alt="" id="imgs">
+            <div class="header">
+                <p id="modelo">AK-47</p>
             </div>
+
+            <div class="descri">
+                <h2 id="arma1">Titulo da Arma</h2>
+                <div class="armas-box">
+                    <div class="item">
+                        <p>Float:</p>
+                        <p>Raridade:</p>
+                        <p>Preço:</p>
+                    </div>
+                    <img src="imgs/log_mibr.jpg" alt="" class="img" id="img1">
+                </div>
+            </div>
+
+            <div class="descri">
+                <h2 id="arma2">Titulo da Arma</h2>
+                <div class="armas-box">
+                    <img src="imgs/log_mibr.jpg" alt="" class="img" id="img2">
+                    <div class="item">
+                        <p>Float:</p>
+                        <p>Raridade:</p>
+                        <p>Preço:</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="descri">
+                <h2 id="arma3">Titulo da Arma</h2>
+                <div class="armas-box">
+                    <div class="item">
+                        <p>Float:</p>
+                        <p>Raridade:</p>
+                        <p>Preço:</p>
+                    </div>
+                    <img src="imgs/log_mibr.jpg" alt="" class="img" id="img3">
+                </div>
+            </div>
+
         </div>
     </div>
+
+    <!-- <footer>
+        <div class="container">
+
+            <div class="redes">
+                <a href="https://www.instagram.com/luis80silva/"><img src="imgs/insta.jpg" alt=""></a>
+                <a href="https://steamcommunity.com/id/Luis-Bombz/"><img src="imgs/steam2.png" alt=""></a>
+                <a href="https://github.com/Luis-Silva80"><img src="imgs/github.png" alt=""></a>
+            </div>
+        </div>
+    </footer> -->
 
 </body>
 
@@ -99,6 +146,50 @@
         document.getElementById("text5").innerHTML = 'Facas';
         document.getElementById("imas").style.width = "initial";
 
+    }
+
+    arma1.innerHTML += '';
+    arma2.innerHTML += '';
+    arma3.innerHTML += '';
+
+    function ak() {
+        modelo.innerHTML = 'AK-47';
+        arma1.innerHTML = 'Assimov';
+        arma2.innerHTML = 'Imperatriz';
+        arma3.innerHTML = 'Nevóa-Frontal';
+        img1.src = "./imgs/ak-assimov.png";
+        img2.src = "./imgs/ak-imperatriz.jpg";
+        img3.src = "./imgs/ak-nevoa.png";
+    }
+    function awp() {
+        modelo.innerHTML = 'AWP';
+        arma1.innerHTML = 'Assimov';
+        arma2.innerHTML = 'Dragon Lore';
+        arma3.innerHTML = 'Gungnir';
+        img1.src = "./imgs/awp-assimov.jpg";
+        img2.src = "./imgs/awp-dragon.jpg";
+        img3.src = "./imgs/awp-gunter.jpg";
+    }
+    function pistol() {
+        modelo.innerHTML = 'PISTOLS';
+        arma1.innerHTML = 'Blaze';
+        arma2.innerHTML = 'Cortex';
+        arma3.innerHTML = 'FlashBack';
+    }
+    function m4() {
+        modelo.innerHTML = 'M4';
+        arma1.innerHTML = 'Howl';
+        arma2.innerHTML = 'Imperador';
+        arma3.innerHTML = 'Rei Dragão';
+        img1.src = "./imgs/m4-howl.jpg";
+        img2.src = "./imgs/m4-imperador.jpg";
+        img3.src = "./imgs/m4-rei.jpg";
+    }
+    function faca() {
+        modelo.innerHTML = 'FACAS';
+        arma1.innerHTML = 'Butterfly';
+        arma2.innerHTML = 'Karambit';
+        arma3.innerHTML = 'Baionet';
     }
 
 

@@ -8,7 +8,7 @@ aside {
     color: white;
     width: 20%;
     background: linear-gradient(329.54deg,red 20%,  black 80%);
-    height: 100vh;
+    height: 103.2vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,6 +46,7 @@ aside a{
     align-items: center;
     justify-content: space-between;
     display: flex;
+    cursor: pointer;
 }
 
 .armas img{
@@ -64,30 +65,94 @@ aside a{
 
 .box-menu{
     width: 80%;
-    height: 100vh;
-    background-color: blue;
+    height: auto;
+    /* background-color: blue; */
     float: left;
     transition-duration: 400ms;
 }
 
-.box-menu .cont {
+.box-menu .cont{
     width: 80%;
     margin: 10px auto;
-    height: 90vh;
-    background-color: burlywood;
+    height: auto;
+    background-color: #C4C4C4;
+    
+}
+
+.box-menu .cont .descri{
+    width: 80%;
+    /* display: flex; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-bottom: 4px black solid;
+    margin: 0 auto;
+    padding-bottom: 25px;
+}
+
+
+
+.box-menu .cont .header{
+    margin: 0 auto;
+    background-color: #C4C4C4;
+    width: 80%;
+    height: 60px;
+    border-bottom: 3px black solid;
+    align-items: center;
+    padding-top: 1px;
+    transition: 0.8s;
+}
+
+.box-menu .cont .header p{
+    margin-left: 400px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    color: black;
     
 }
 
 .box-menu .cont h2{
+    margin-left: 400px;
+    margin-top: 0;
     padding-top: 30px;
+    font-size: 30px;
 }
 
-.box-menu .cont .item{
+/* .box-menu .cont .item{
+    /* display: flex; 
+} */
+
+
+.box-menu .cont .descri .armas-box{
+    width: 100%;
+    margin: 0 auto;
     display: flex;
+    justify-content: space-around;
 }
+
+
+.box-menu .cont .item p{
+    margin-left: 100px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+}
+
+
 
 .box-menu .cont .item #imgs{
     width: 200px;
     height: 500px;
     background-color: chartreuse;
+}
+
+.box-menu .cont .descri .armas-box .img{
+    width: 50%;
+    height: 300px;
+    transition-duration: 700ms;
+    transition-property: background;
+}
+
+/* fim do conteudo */
+
+
+footer{
+    background-color: black;
 }
