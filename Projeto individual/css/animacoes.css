@@ -18,6 +18,18 @@
     }
 }
 
+
+@keyframes troca{
+    0%{
+        opacity: 1;
+        transform:scale(1.1,1.1);
+
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
 .animate-down{
     animation-name: down;
     animation-duration: 500ms;
@@ -28,3 +40,10 @@
     animation-name: right;
     animation-duration: 500ms;
 }
+
+.animate-troca{
+    animation-name: troca;
+    animation-duration: 500ms;
+}
+
+

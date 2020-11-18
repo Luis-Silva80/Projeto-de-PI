@@ -20,7 +20,7 @@
     <header>
         <div class="container">
             <img onclick="fecha_menu()" class="imgs" src="imgs/icone_fechar.png" alt="" id="fecha_btn">
-            <img onclick="abre_menu()" class="imgs" src="imgs/menu_hamburguer.png" alt="" id="abre_btn">
+            <img onclick="abre_menu()" style="display: none;" class="imgs" src="imgs/menu_hamburguer.png" alt="" id="abre_btn">
 
             <ul class="animate-down">
                 <li class="items"><a href="./login.html">home</a></li>
@@ -71,14 +71,14 @@
                         <p>Raridade:</p>
                         <p>Preço:</p>
                     </div>
-                    <img src="imgs/log_mibr.jpg" alt="" class="img" id="img1">
+                    <img src="imgs/log_mibr.jpg" alt="" class="img .animate-troca" id="img1">
                 </div>
             </div>
 
             <div class="descri">
                 <h2 id="arma2">Titulo da Arma</h2>
                 <div class="armas-box">
-                    <img src="imgs/log_mibr.jpg" alt="" class="img" id="img2">
+                    <img src="imgs/log_mibr.jpg" alt="" class="img .animate-troca" id="img2">
                     <div class="item">
                         <p>Float:</p>
                         <p>Raridade:</p>
@@ -96,23 +96,25 @@
                         <p>Raridade:</p>
                         <p>Preço:</p>
                     </div>
-                    <img src="imgs/log_mibr.jpg" alt="" class="img" id="img3">
+                    <img src="imgs/log_mibr.jpg" alt="" class="img .animate-troca" id="img3">
                 </div>
             </div>
 
         </div>
     </div>
 
+    
     <!-- <footer>
         <div class="container">
-
+           
             <div class="redes">
-                <a href="https://www.instagram.com/luis80silva/"><img src="imgs/insta.jpg" alt=""></a>
+                <a href="https://www.facebook.com/people/Luis-Gustavo"><img src="imgs/facebook.png" alt=""></a>
                 <a href="https://steamcommunity.com/id/Luis-Bombz/"><img src="imgs/steam2.png" alt=""></a>
                 <a href="https://github.com/Luis-Silva80"><img src="imgs/github.png" alt=""></a>
             </div>
         </div>
     </footer> -->
+    
 
 </body>
 
@@ -123,7 +125,7 @@
     function fecha_menu() {
         document.getElementById("menu").style.width = "8%";
         document.getElementById("box-menu").style.width = "92%";
-        document.getElementById("abre_btn").style.display = "block";
+        document.getElementById("abre_btn")
         document.getElementById("fecha_btn").style.display = "none";
         document.getElementById("text").innerHTML = '';
         document.getElementById("text3").innerHTML = '';
@@ -137,7 +139,7 @@
     function abre_menu() {
         document.getElementById("menu").style.width = "20%";
         document.getElementById("box-menu").style.width = "80%";
-        document.getElementById("fecha_btn").style.display = "block";
+        document.getElementById("fecha_btn")
         document.getElementById("abre_btn").style.display = "none";
         document.getElementById("text").innerHTML = 'AK-47';
         document.getElementById("text2").innerHTML = 'AWP';
@@ -175,6 +177,9 @@
         arma1.innerHTML = 'Blaze';
         arma2.innerHTML = 'Cortex';
         arma3.innerHTML = 'FlashBack';
+        img1.src = "./imgs/desert-blaze.jpg";
+        img2.src = "./imgs/usp-cortex.jpg_large";
+        img3.src = "./imgs/usp-flash.jpg";
     }
     function m4() {
         modelo.innerHTML = 'M4';
@@ -190,6 +195,9 @@
         arma1.innerHTML = 'Butterfly';
         arma2.innerHTML = 'Karambit';
         arma3.innerHTML = 'Baionet';
+        img1.src = "./imgs/faca-but.jpg";
+        img2.src = "./imgs/karambit-lore.png";
+        img3.src = "./imgs/baionet-fade.jpg";
     }
 
 

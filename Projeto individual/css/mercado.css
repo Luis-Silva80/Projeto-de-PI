@@ -8,7 +8,7 @@ aside {
     color: white;
     width: 20%;
     background: linear-gradient(329.54deg,red 20%,  black 80%);
-    height: 103.2vh;
+    height:100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,13 +146,17 @@ aside a{
 .box-menu .cont .descri .armas-box .img{
     width: 50%;
     height: 300px;
-    transition-duration: 700ms;
-    transition-property: background;
+    border: 4px gray solid;
+    border-radius: 10%;
+    transition: 700ms;
+    
+}
+
+.box-menu .cont .descri .armas-box .img:hover{
+    transform: scale(1.4);
+    opacity: 0.87;
+    border: 0;
+    margin-bottom: 50px;
 }
 
 /* fim do conteudo */
-
-
-footer{
-    background-color: black;
-}
