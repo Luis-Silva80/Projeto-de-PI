@@ -14,7 +14,7 @@ body {
     width: 80%;
     margin: auto;
     padding-top: 30px;
-    height: 600px;
+    height: 500px;
 }
 
 .conteudo .container .form {
@@ -27,11 +27,12 @@ body {
 
 /* fim da estrutura da pagina */
 
-header {
+.conteudo .container .form header {
     background-color: #1C1C1C;
+    height: 80px;
 }
 
-header h2 {
+.conteudo .container .form header h2 {
     margin-left: 30px;
     color: white;
     font-weight: 400;
@@ -41,15 +42,16 @@ header h2 {
 
 .banner {
     display: flex;
-    justify-content: stretch;
+    width: 80%;
+    margin: auto;
+    /* justify-content: stretch; */
     border-bottom: white 2px solid;
+    background-color: #363636;
 }
 
 .banner img {
-    width: 100px;
-    margin-left: 10%;
-    /* float: left; */
-    margin-right: 15px;
+    width: 80px;
+    /* margin: auto; */
 }
 
 .banner p {
@@ -60,15 +62,18 @@ header h2 {
 
 /* fim do banner */
 
-form .container {
+.form .container2 {
     width: 80%;
-    margin: auto;
+    margin:0 auto;
+    background-color: #363636;
+    height: 300px;
 
 
 }
 
-.container form {
+.container2 form {
     border-bottom: white 2px solid;
+    background-color: #363636;
 
 }
 
@@ -95,19 +100,20 @@ form .container {
 
 /* fim dos inputs */
 
-.container .acesso {
-
+.container2 .acesso {
+    background-color: #363636;
     padding-top: 10px;
 }
 
-.container .acesso .main {
+.container2 .acesso .main {
+    background-color: #363636;
     height: 50px;
     display: flex;
     /* border-bottom: #F5F5F5 2px solid; */
     padding-top: 10px;
 }
 
-.container .acesso .main button {
+.container2 .acesso .main button {
     width: 29%;
     background-color: #363636;
     border: 0;
@@ -116,7 +122,7 @@ form .container {
 
 }
 
-.container .acesso .main #login {
+.container2 .acesso .main #login {
     margin-left: 22%;
     margin-right: 20px;
     width: 29%;
@@ -128,12 +134,12 @@ form .container {
 
 /* fim dos botões de login*/
 
-.container .cad {
+.container2 .cad {
     height: 65px;
     border-bottom: white 2px solid;
 }
 
-.container .cad #cadastro {
+.container2 .cad #cadastro {
     margin-left: 35%;
     margin-right: 20px;
     width: 29%;
@@ -143,7 +149,7 @@ form .container {
     height: 30px;
 }
 
-.container .cad button {
+.container2 .cad button {
     margin-top: 20px;
     margin-left: 30%;
     width: 40%;
