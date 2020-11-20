@@ -48,22 +48,23 @@
                         <label>Digite sua senha</label>
                         <input type="password" id="senha">
                     </div>
-            </div>
-            <div class="acesso">
-                <button onclick="cadastrar()" id="cadastro">Cadastrar</button>
-                <button onclick="limpar()" class="btn2">Limpar</button>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <div class="container">
-            <div class="redes">
-                <a href="https://www.instagram.com/luis80silva/"><img src="imgs/insta.jpg" alt=""></a>
-                <a href="https://steamcommunity.com/id/Luis-Bombz/"><img src="imgs/steam2.png" alt=""></a>
-                <a href="https://github.com/Luis-Silva80"><img src="imgs/github.png" alt=""></a>
+                    <div class="acesso">
+                        <button id="cadastro">Cadastrar</button>
+                        <button onclick="limpar()" class="btn2">Limpar</button>
+                    </div>
+                </form>
+
             </div>
         </div>
-    </footer>
+        <footer>
+            <div class="container">
+                <div class="redes">
+                    <a href="https://www.instagram.com/luis80silva/"><img src="imgs/insta.jpg" alt=""></a>
+                    <a href="https://steamcommunity.com/id/Luis-Bombz/"><img src="imgs/steam2.png" alt=""></a>
+                    <a href="https://github.com/Luis-Silva80"><img src="imgs/github.png" alt=""></a>
+                </div>
+            </div>
+        </footer>
 
 </body>
 
@@ -71,6 +72,10 @@
 
 
 <script>
+    document.querySelector('#form1').addEventListener('submit', function (e) {
+        e.preventDefault();
+        cadastrar();
+    })
     function limpar() {
         document.getElementById('nome').value = '';
         document.getElementById('nick').value = '';
@@ -78,5 +83,6 @@
     }
     function cadastrar() {
         window.location.href = 'login.html';
+        console.log('entrou')
     }
 </script>
