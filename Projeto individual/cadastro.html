@@ -1,33 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
 
-    
+
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/animacoes.css">
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/cadastro.css">
 
     <link rel="shortcut icon" href="imgs/cs.ico" type="">
 </head>
-<body>
-    
-    <header>
 
+<body>
+
+    <header>
         <div class="container">
-            <!-- <label for="">
-                <i onclick="abre_menu()" class="fas fa-bars" id="abre_btn" style="display:none;"></i>
-                <i onclick="fecha_menu()" class="fas fa-times-circle" id="fecha_btn" ></i>
-            </label> -->
+            <img src="imgs/eu.jpg" alt="">
             <ul class="animate-down">
-                <li> <a href="./csgo.html">home</a></li>
-                <li><a href="./times.html">Times</a></li>
-                <li><a href="login.html">login</a></li>
+                <li class="items"><a href="csgo.html">home</a></li>
+                <li class="items"><a href="times.html">Times</a></li>
+                <li class="items"><a href="login.html">Login</a></li>
+                <li class="current items">Cadastro</li>
             </ul>
         </div>
     </header>
 
+
+    <div class="conteudo">
+        <div class="form">
+            <header>
+                <h2>Faça Seu Cadastro</h2>
+            </header>
+            <div class="container2">
+                <form id="form1">
+                    <div class="fullbox">
+                        <label>Digite seu nome</label>
+                        <input type="text" id="nome">
+                    </div>
+                    <div class="fullbox">
+                        <label>Digite seu Nickname</label>
+                        <input type="text" id="nick">
+                    </div>
+                    <div class="fullbox">
+                        <label>Digite sua senha</label>
+                        <input type="password" id="senha">
+                    </div>
+            </div>
+            <div class="acesso">
+                <button onclick="cadastrar()" id="cadastro">Cadastrar</button>
+                <button onclick="limpar()" class="btn2">Limpar</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+
+            <div class="redes">
+                <a href="https://www.facebook.com/people/Luis-Gustavo"><img src="imgs/facebook.png" alt=""></a>
+                <a href="https://steamcommunity.com/id/Luis-Bombz/"><img src="imgs/steam2.png" alt=""></a>
+                <a href="https://github.com/Luis-Silva80"><img src="imgs/github.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
+
 </body>
+
 </html>
+
+
+<script>
+    function limpar() {
+        document.getElementById('nome').value = '';
+        document.getElementById('nick').value = '';
+        document.getElementById('senha').value = '';
+    }
+    function cadastrar() {
+        window.location.href = 'login.html';
+    }
+</script>
