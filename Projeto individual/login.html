@@ -31,15 +31,11 @@
                 <header>
                     <h2>Iniciar Sessão</h2>
                 </header>
-                <div class="banner">
-                    <img src="./imgs/Steam.ico" alt="">
-                    <p>STEAM</p>
-                </div>
                 <div class="container2">
                     <form id="form1">
                         <div class="fullbox">
-                            <label>Nome de Usuário</label>
-                            <input type="text" id="user">
+                            <label>Digite seu nick</label>
+                            <input type="text" id="nick">
                         </div>
                         <div class="fullbox">
                             <label>Senha</label>
@@ -60,6 +56,18 @@
             </div>
         </div>
     </div>
+
+    <footer>
+        <div class="container">
+            <div class="redes">
+                <a href="https://www.instagram.com/luis80silva/"><img src="imgs/insta.jpg" alt=""></a>
+                <a href="https://steamcommunity.com/id/Luis-Bombz/"><img src="imgs/steam2.png" alt=""></a>
+                <a href="https://github.com/Luis-Silva80"><img src="imgs/github.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
+
+
 </body>
 
 </html>
@@ -74,10 +82,10 @@
     }
 
     function limpar() {
-        document.getElementById('user').value='';
-        document.getElementById('senha').value='';
+        document.getElementById('nick').value = '';
+        document.getElementById('senha').value = '';
     }
 
-    
+
 
 </script>

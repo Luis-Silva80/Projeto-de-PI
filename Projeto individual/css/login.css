@@ -18,63 +18,44 @@ body {
 }
 
 .conteudo .container .form {
-    background-color: #1C1C1C;
+    /* background-color: #1C1C1C; */
     width: 50%;
     height: 500px;
     margin: auto;
+    box-shadow: 0px 10px 15px rgba(0,0,0,.5);
+    overflow: hidden;
+    font-family: 'CSGO';
 
 }
 
 /* fim da estrutura da pagina */
 
 .conteudo .container .form header {
-    background-color: #1C1C1C;
+    background-color: black;
+    align-items: center;
     height: 80px;
+    justify-content: center;
 }
 
 .conteudo .container .form header h2 {
-    margin-left: 30px;
+    font-size: 30px;
     color: white;
     font-weight: 400;
 }
 
 /* fim do header */
 
-.banner {
-    display: flex;
-    width: 80%;
-    margin: auto;
-    /* justify-content: stretch; */
-    border-bottom: white 2px solid;
-    background-color: #363636;
-}
-
-.banner img {
-    width: 80px;
-    /* margin: auto; */
-}
-
-.banner p {
-    font-weight: 300;
-    font-size: 30px;
-    color: white;
-}
-
-/* fim do banner */
-
 .form .container2 {
     width: 80%;
     margin:0 auto;
-    background-color: #363636;
-    height: 300px;
+    height: auto;
+    line-height: 80px;
 
 
 }
 
 .container2 form {
-    border-bottom: white 2px solid;
-    background-color: #363636;
-
+    padding-top: 20px;
 }
 
 .fullbox {
@@ -82,6 +63,8 @@ body {
     margin-bottom: 20px;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    font-size: 30px;
 }
 
 
@@ -94,6 +77,9 @@ body {
     width: 50%;
     height: 20px;
     border-radius: 5px;
+    font-family: 'CSGO';
+    font-size: 20px;
+    text-align: center;
 }
 
 
@@ -101,12 +87,12 @@ body {
 /* fim dos inputs */
 
 .container2 .acesso {
-    background-color: #363636;
+    /* background-color: #363636; */
     padding-top: 10px;
 }
 
 .container2 .acesso .main {
-    background-color: #363636;
+    /* background-color: #363636; */
     height: 50px;
     display: flex;
     /* border-bottom: #F5F5F5 2px solid; */
@@ -115,10 +101,10 @@ body {
 
 .container2 .acesso .main button {
     width: 29%;
-    background-color: #363636;
     border: 0;
     color: white;
     height: 30px;
+    border-radius: 20px;
 
 }
 
@@ -134,14 +120,7 @@ body {
 
 /* fim dos botões de login*/
 
-.container2 .cad {
-    height: 65px;
-    border-bottom: white 2px solid;
-}
-
-.container2 .cad #cadastro {
-    margin-left: 35%;
-    margin-right: 20px;
+.container2 .btn2{
     width: 29%;
     background-color: #363636;
     border: 0;
@@ -149,12 +128,22 @@ body {
     height: 30px;
 }
 
+.container2 .cad {
+    width: 80%;
+    margin: 0 auto;
+    height: 65px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+
 .container2 .cad button {
-    margin-top: 20px;
-    margin-left: 30%;
+    margin: 0 auto;
     width: 40%;
     background-color: #363636;
     border: 0;
     color: white;
     height: 30px;
+    border-radius: 20px;
 }
