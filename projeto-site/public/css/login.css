@@ -99,12 +99,14 @@ body {
     padding-top: 10px;
 }
 
-.container2 .acesso .main button {
+.container2  button {
     width: 29%;
     border: 0;
     color: white;
     height: 30px;
     border-radius: 20px;
+    background-color: #363636;
+    margin-left: 35%;
 
 }
 
@@ -120,30 +122,3 @@ body {
 
 /* fim dos botões de login*/
 
-.container2 .btn2{
-    width: 29%;
-    background-color: #363636;
-    border: 0;
-    color: white;
-    height: 30px;
-}
-
-.container2 .cad {
-    width: 80%;
-    margin: 0 auto;
-    height: 65px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-
-
-.container2 .cad button {
-    margin: 0 auto;
-    width: 40%;
-    background-color: #363636;
-    border: 0;
-    color: white;
-    height: 30px;
-    border-radius: 20px;
-}

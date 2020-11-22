@@ -35,25 +35,28 @@
                 <h2>Faça Seu Cadastro</h2>
             </header>
             <div class="container2">
-                <form id="form1">
+                <form id="form_cadastro" method="POST" onsubmit="return cadastrar()">
                     <div class="fullbox">
                         <label>Digite seu nome</label>
-                        <input type="text" id="nome">
+                        <input name="nome" type="text" id="nome">
                     </div>
                     <div class="fullbox">
                         <label>Digite seu Nickname</label>
-                        <input type="text" id="nick">
+                        <input name="login" type="text" id="login">
                     </div>
                     <div class="fullbox">
                         <label>Digite sua senha</label>
-                        <input type="password" id="senha">
+                        <input name="senha" type="password" id="senha">
                     </div>
+                    <button id="cadastro">Cadastrar</button>
                     <div class="acesso">
-                        <button id="cadastro">Cadastrar</button>
-                        <button onclick="limpar()" class="btn2">Limpar</button>
+                         
                     </div>
                 </form>
-
+                <button onclick="limpar()" class="btn2">Limpar</button>
+                <!-- <div id="div_erro" style="background-color: #bf8899; color: maroon; display: none;">
+                    Erro no cadastro
+                </div> -->
             </div>
         </div>
         <footer>
@@ -72,10 +75,10 @@
 
 
 <script>
-    document.querySelector('#form1').addEventListener('submit', function (e) {
-        e.preventDefault();
-        cadastrar();
-    })
+    // document.querySelector('#form1').addEventListener('submit', function (e) {
+    //     e.preventDefault();
+    //     cadastrar();
+    // })
     function limpar() {
         document.getElementById('nome').value = '';
         document.getElementById('nick').value = '';
@@ -84,5 +87,32 @@
     function cadastrar() {
         window.location.href = 'login.html';
         console.log('entrou')
+    }
+
+
+
+    function cadastrar() {
+        // aguardar();
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+
+            if (response.ok){
+
+                window.location.href = 'login.html';
+
+            } else {
+
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    div_erro.innerHTML = resposta;
+                });
+                // finalizar_aguardar();
+            }
+        });
+
+        return false;
     }
 </script>

@@ -1,0 +1,10 @@
+nome do Recurso: recursoLuis
+
+nome do Banco de dados: BancoCS
+
+nome do servidor: servidorluis
+
+senha servidor: #Gf49560628852
+
+
+

@@ -18,9 +18,10 @@
         <div class="container">
             <img src="imgs/eu.jpg" alt="">
             <ul class="animate-down">
-                <li class="items"><a href="csgo.html">home</a></li>
+                <li class="items"><a href="index.html">home</a></li>
                 <li class="items"><a href="times.html">Times</a></li>
                 <li class="current items">login</li>
+                <li class="items"><a href="cadastro.html">Cadastro</a></li>
             </ul>
         </div>
     </header>
@@ -32,25 +33,21 @@
                     <h2>Iniciar Sessão</h2>
                 </header>
                 <div class="container2">
-                    <form id="form1">
+                    <form id="form_login" method="post" onsubmit="return entrar()">
                         <div class="fullbox">
                             <label>Digite seu nick</label>
-                            <input type="text" id="nick">
+                            <input name="login" type="text" id="nick">
                         </div>
                         <div class="fullbox">
                             <label>Senha</label>
-                            <input type="password" id="senha">
-
+                            <input name="senha" type="password" id="senha">
                         </div>
+                        <button id="btn_entrar">Login</button>
                     </form>
                     <div class="acesso">
                         <div class="main">
-                            <button onclick="mercado()" id="login">Login</button>
                             <button onclick="limpar()" class="btn2">Limpar</button>
                         </div>
-                    </div>
-                    <div class="cad">
-                        <button onclick="cadastro()">Cadastrar</button>
                     </div>
                 </div>
             </div>
@@ -73,9 +70,9 @@
 </html>
 
 <script>
-    function mercado() {
-        window.location.href = 'mercado.html';
-    }
+    // function mercado() {
+    //     window.location.href = 'mercado.html';
+    // }
 
     function cadastro() {
         window.location.href = 'cadastro.html';
@@ -86,6 +83,51 @@
         document.getElementById('senha').value = '';
     }
 
+
+    function entrar() {
+        // aguardar();
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+
+            if (resposta.ok) {
+
+                resposta.json().then(json => {
+
+                    sessionStorage.login_usuario_meuapp = json.nomeLogin;
+                    sessionStorage.nome_usuario_meuapp = json.nome;
+
+                    window.location.href = 'mercado.html';
+                });
+
+            } else {
+
+                console.log('Erro de login!');
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    // finalizar_aguardar(texto);
+                });
+            }
+        });
+
+        return false;
+    }
+
+    function aguardar() {
+        btn_entrar.disabled = true;
+        img_aguarde.style.visibility = 'visible';
+        div_erro.style.visibility = 'hidden';
+    }
+
+    function finalizar_aguardar(resposta) {
+        btn_entrar.disabled = false;
+        img_aguarde.style.visibility = 'hidden';
+        div_erro.style.visibility = 'visible';
+        div_erro.innerHTML = resposta;
+    }
 
 
 </script>
