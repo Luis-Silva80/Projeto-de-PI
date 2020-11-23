@@ -3,7 +3,7 @@ module.exports = {
     username: 'Luis',
     password: 'bandtec',
     database: 'Luis',
-    host: 'localhost',
+    host: 'localhost',  
     dialect: 'mysql',
     xuse_env_variable: 'DATABASE_URL',
     dialectOptions: {

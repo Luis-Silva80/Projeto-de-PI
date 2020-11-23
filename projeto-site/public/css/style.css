@@ -78,22 +78,33 @@ a:hover {
 }
 
 .box-video{
-    width: 100%;
+    width: 100vw;
     height:auto;
     background: url(../imgs/fundo.png) no-repeat center fixed;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
-.box-video h1{
+.trailer{
+    align-items: center;
+    background: url(../imgs/fundo.png) no-repeat center fixed;
+    display: flex;
+    justify-content: center;
+}
+
+.trailer h1{
     padding-top: 10px;
     font-family: 'CSGO';
     font-size: 40px;
     color: white;
-    margin: 0 980px;
+    margin: 0;
+    
 }
 
 .box-video iframe{
-    /* padding-top: 10px; */
-    margin-left: 700px;
+    padding-top: 10px;
+    /* margin-left: ; */
 }
 
 .box {
