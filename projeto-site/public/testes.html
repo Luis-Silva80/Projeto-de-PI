@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicações</title>
+</head>
+<body>
+
+    Digite uma arma do game <input type="text" id="in_armas"><br>
+    <button onclick="cadastrar()">Cadastrar</button><br>
+    <b id="b_awp"></b>
+    
+</body>
+</html>
+
+<script>
+
+    function cadastrar(){
+        var awp = in_armas.value;
+        var awp_verifica = awp == 'AWP' || awp == 'awp';
+
+        if(awp_verifica){
+            b_awp.innerHTML = 'Sua arma favorita é a AWP'; 
+        } else {
+            b_awp.innerHTML = 'Sua arma favorita não é a AWP';
+        }
+    }
+
+</script>
