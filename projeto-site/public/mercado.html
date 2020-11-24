@@ -16,15 +16,15 @@
     <script type="text/javascript" src="funcoes.js"></script>
 
 </head>
-<!-- <script>
+<script>
 
     let usuario;
 
     verificar_autenticacao();
 
     
-</script> -->
-<body>
+</script>
+<body onload="verificar_autenticacao()">
 
     <header>
         <div class="container">
@@ -32,8 +32,7 @@
             <img onclick="abre_menu()" style="display: none;" class="imgs" src="imgs/menu_hamburguer.png" alt="" id="abre_btn">
 
             <ul class="animate-down">
-                <li class="items"><a href="./login.html">home</a></li>
-                <li class="items"><a href="./times.html">Times</a></li>
+                <li class="items">Olá, <b id="b_usuario"></b></li>
                 <li class="items current">Mercado</li>
                 <li class="items"><a onclick="logoff()">LOGOUT</a></li>
             </ul>
