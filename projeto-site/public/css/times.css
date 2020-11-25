@@ -89,6 +89,8 @@ header {
     height: 450px;
     background-color: lawngreen;
     border-radius: 10px;
+    /* transition-delay: 3s; */
+
 }
 
 /* fim do conteudo */

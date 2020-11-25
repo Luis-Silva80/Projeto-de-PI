@@ -1,10 +1,10 @@
 
 .conteudo{
     width: 100%;
-    height: 50vh;
+    height: auto;
     background-color: wheat;
     background: url(../imgs/mapas.png) fixed center;
-    padding-top: 30px;
+    padding: 30px 0;
 }
 
 .conteudo .container{
@@ -26,6 +26,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 .conteudo .container .cont{
@@ -40,14 +41,14 @@
 }
 
 .conteudo .container .cont p{
-    width: 70%;
+    width: 40%;
     color: white;
 
 }
 
 .conteudo .container .cont img{
-    width: 30%;
-    height: 300px;
+    width: 60%;
+    height: 600px;
     background-color: black;
 }
 

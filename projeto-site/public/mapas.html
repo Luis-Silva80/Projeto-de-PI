@@ -76,34 +76,43 @@
         for (var i = 0; i < 1; i++) {
             div_sorteio.innerHTML = '';
             var numero_sorteado = parseInt((Math.random() * 7) + 1);
+
+            var mirage = numero_sorteado == 1;
+            var overpass = numero_sorteado == 2;
+            var inferno = numero_sorteado == 3;
+            var dust2 = numero_sorteado == 4;
+            var nuke = numero_sorteado == 5;
+            var cache = numero_sorteado == 6;
+
+
             div_sorteio.innerHTML += `${numero_sorteado}<br>`
 
-            if (numero_sorteado == 1) {
+            if (mirage) {
 
                 img_mapas.src = './imgs/map-mirage.jpg';
                 nome_mapa.innerHTML ='Mirage';
                 resultado.innerHTML = 'mirage';
-            } else if (numero_sorteado == 2) {
+            } else if (overpass) {
 
                 img_mapas.src = './imgs/map-overpass.jpg';
                 nome_mapa.innerHTML = 'Overpass';
                 resultado.innerHTML = 'overpass';
-            } else if (numero_sorteado == 3) {
+            } else if (inferno) {
 
                 img_mapas.src = './imgs/map-inferno.jpg';
                 nome_mapa.innerHTML = 'Inferno';
                 resultado.innerHTML = 'inferno';
-            } else if (numero_sorteado == 4) {
+            } else if (dust2) {
 
                 nome_mapa.innerHTML = 'Dust2';
                 img_mapas.src = './imgs/map-d2.jpg';
                 resultado.innerHTML = 'dust2';
-            } else if (numero_sorteado == 5) {
+            } else if (nuke) {
 
                 img_mapas.src = './imgs/map-nuke.jpg';
                 nome_mapa.innerHTML = 'Nuke';
                 resultado.innerHTML = 'nuke';
-            } else if (numero_sorteado == 6) {
+            } else if (cache) {
 
                 img_mapas.src = './imgs/map-cache.jpg';
                 nome_mapa.innerHTML = 'Cache';
