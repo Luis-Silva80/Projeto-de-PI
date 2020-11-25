@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapas</title>
+
+    <link rel="stylesheet" href="./css/animacoes.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/efeitos.css">
+    <link rel="stylesheet" href="./css/mapas.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <link rel="shortcut icon" href="imgs/cs.ico" type="">
+</head>
+<body>
+
+    <header class="animate-down">
+
+        <div class="container">
+            <img src="imgs/eu.jpg" alt="">
+            <ul>
+                <li class="current items"> home</li>
+                <li class="items"><a href="./times.html">Times</a></li>
+                <li class="items"><a href="./login.html">Mercado</a></li>
+                <li class="items"><a href="login.html">login</a></li>
+            </ul>
+        </div>
+    </header>
+
+   <div class="conteudo">
+
+       <div class="container">
+        Digite uma arma do game <input type="text" id="in_armas"><br>
+        <button onclick="cadastrar()">Cadastrar</button><br>
+        <button onclick="sorteia()">Sorteia um mapa</button>
+        <b id="b_awp"></b><br><br>
+        <div id="div_sorteio"></div><br>
+        <div id="resultado"></div>
+       </div>
+       
+   </div>
+    
+</body>
+</html>
+
+<script>
+
+    function cadastrar(){
+        var awp = in_armas.value;
+        var awp_verifica = awp == 'AWP' || awp == 'awp';
+
+        if(awp_verifica){
+            b_awp.innerHTML = 'Sua arma favorita é a AWP'; 
+        } else {
+            b_awp.innerHTML = 'Sua arma favorita não é a AWP';
+        }
+    }
+
+    function sorteia(){
+        for (var i = 0; i < 1; i++) {
+            div_sorteio.innerHTML = '';
+            var numero_sorteado = parseInt((Math.random() * 7) + 1);
+            div_sorteio.innerHTML += `${numero_sorteado}<br>`
+
+            if (numero_sorteado == 1) {
+                resultado.innerHTML = 'mirage';
+            } else if(numero_sorteado == 2){
+                resultado.innerHTML = 'overpass';
+            } else if(numero_sorteado == 3){
+                resultado.innerHTML = 'inferno';
+            } else if(numero_sorteado == 4){
+                resultado.innerHTML = 'dust2';
+            } else if(numero_sorteado == 5){
+                resultado.innerHTML = 'nuke';
+            } else if(numero_sorteado == 6){
+                resultado.innerHTML = 'vertigo';
+            } else {
+                resultado.innerHTML = 'train';
+            }
+        }
+    }
+
+
+</script>
