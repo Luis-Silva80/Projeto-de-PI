@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +19,7 @@
 
     <link rel="shortcut icon" href="imgs/cs.ico" type="">
 </head>
+
 <body>
 
     <header class="animate-down">
@@ -33,54 +35,83 @@
         </div>
     </header>
 
-   <div class="conteudo">
+    <div class="conteudo">
 
-       <div class="container">
-        Digite uma arma do game <input type="text" id="in_armas"><br>
-        <button onclick="cadastrar()">Cadastrar</button><br>
-        <button onclick="sorteia()">Sorteia um mapa</button>
-        <b id="b_awp"></b><br><br>
-        <div id="div_sorteio"></div><br>
-        <div id="resultado"></div>
-       </div>
-       
-   </div>
-    
+        <div class="container">
+            <div class="header">
+                <h1 id="nome_mapa">Mapas</h1>
+            </div>
+            <div class="cont">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ducimus quis officia unde nemo odio beatae rem blanditiis magnam ipsum minima aspernatur, recusandae in autem pariatur totam asperiores vitae labore.</p>
+                <img id="img_mapas" src="" alt="">
+            </div>
+        </div>
+
+    </div>
+    Digite uma arma do game <input type="text" id="in_armas"><br>
+    <button onclick="cadastrar()">Cadastrar</button><br>
+    <button onclick="sorteia()">Sorteia um mapa</button>
+    <b id="b_awp"></b><br><br>
+    <div id="div_sorteio"></div><br>
+    <div id="resultado"></div>
+
 </body>
+
 </html>
 
 <script>
 
-    function cadastrar(){
+    function cadastrar() {
         var awp = in_armas.value;
         var awp_verifica = awp == 'AWP' || awp == 'awp';
 
-        if(awp_verifica){
-            b_awp.innerHTML = 'Sua arma favorita é a AWP'; 
+        if (awp_verifica) {
+            b_awp.innerHTML = 'Sua arma favorita é a AWP';
         } else {
             b_awp.innerHTML = 'Sua arma favorita não é a AWP';
         }
     }
 
-    function sorteia(){
+    function sorteia() {
         for (var i = 0; i < 1; i++) {
             div_sorteio.innerHTML = '';
             var numero_sorteado = parseInt((Math.random() * 7) + 1);
             div_sorteio.innerHTML += `${numero_sorteado}<br>`
 
             if (numero_sorteado == 1) {
+
+                img_mapas.src = './imgs/map-mirage.jpg';
+                nome_mapa.innerHTML ='Mirage';
                 resultado.innerHTML = 'mirage';
-            } else if(numero_sorteado == 2){
+            } else if (numero_sorteado == 2) {
+
+                img_mapas.src = './imgs/map-overpass.jpg';
+                nome_mapa.innerHTML = 'Overpass';
                 resultado.innerHTML = 'overpass';
-            } else if(numero_sorteado == 3){
+            } else if (numero_sorteado == 3) {
+
+                img_mapas.src = './imgs/map-inferno.jpg';
+                nome_mapa.innerHTML = 'Inferno';
                 resultado.innerHTML = 'inferno';
-            } else if(numero_sorteado == 4){
+            } else if (numero_sorteado == 4) {
+
+                nome_mapa.innerHTML = 'Dust2';
+                img_mapas.src = './imgs/map-d2.jpg';
                 resultado.innerHTML = 'dust2';
-            } else if(numero_sorteado == 5){
+            } else if (numero_sorteado == 5) {
+
+                img_mapas.src = './imgs/map-nuke.jpg';
+                nome_mapa.innerHTML = 'Nuke';
                 resultado.innerHTML = 'nuke';
-            } else if(numero_sorteado == 6){
-                resultado.innerHTML = 'vertigo';
+            } else if (numero_sorteado == 6) {
+
+                img_mapas.src = './imgs/map-cache.jpg';
+                nome_mapa.innerHTML = 'Cache';
+                resultado.innerHTML = 'Cache';
             } else {
+
+                img_mapas.src = './imgs/map-train.jpg';
+                nome_mapa.innerHTML = 'Train';
                 resultado.innerHTML = 'train';
             }
         }
