@@ -2,8 +2,7 @@
 .conteudo{
     width: 100%;
     height: auto;
-    background-color: wheat;
-    background: url(../imgs/mapas.png) fixed center;
+    background-color: black;
     padding: 30px 0;
 }
 
@@ -38,6 +37,7 @@
     /* justify-content: center; */
     align-items: center;
     
+    
 }
 
 .conteudo .container .cont p{
@@ -50,6 +50,7 @@
     width: 60%;
     height: 600px;
     background-color: black;
+    /* background: url() center; */
 }
 
 

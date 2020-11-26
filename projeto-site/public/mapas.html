@@ -42,8 +42,10 @@
                 <h1 id="nome_mapa">Mapas</h1>
             </div>
             <div class="cont">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ducimus quis officia unde nemo odio beatae rem blanditiis magnam ipsum minima aspernatur, recusandae in autem pariatur totam asperiores vitae labore.</p>
-                <img id="img_mapas" src="" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ducimus quis officia unde nemo odio
+                    beatae rem blanditiis magnam ipsum minima aspernatur, recusandae in autem pariatur totam asperiores
+                    vitae labore.</p>
+                <img id="img_mapas" src="./imgs/mapas.png" alt="">
             </div>
         </div>
 
@@ -89,9 +91,11 @@
 
             if (mirage) {
 
-                img_mapas.src = './imgs/map-mirage.jpg';
-                nome_mapa.innerHTML ='Mirage';
+                nome_mapa.innerHTML = 'Mirage';
                 resultado.innerHTML = 'mirage';
+                mapmirage();
+
+
             } else if (overpass) {
 
                 img_mapas.src = './imgs/map-overpass.jpg';
@@ -125,6 +129,41 @@
             }
         }
     }
+
+
+    var intervalo = 2000;
+
+    function mapmirage() {
+        img_mapas.src = './imgs/map-mirage.jpg';
+        setTimeout("mirageA()", intervalo);
+    }
+
+    function mirageA() {
+        img_mapas.src = './imgs/mirage-bA.jpg';
+        setTimeout("mirageMeio()", intervalo);
+    }
+
+    function mirageMeio() {
+        img_mapas.src = './imgs/mirage-meio.jpg';
+        setTimeout("mirageB()", intervalo);
+    }
+
+    function mirageB() {
+        img_mapas.src = './imgs/mirage-bB.jpg';
+        setTimeout("mirageCold()", intervalo);
+    }
+    function mirageCold() {
+        img_mapas.src = './imgs/mirage-bB-cold.jpg';
+        setTimeout("mapmirage()", intervalo);
+    }
+
+
+
+    function mapoverpass(){
+        
+    }
+
+
 
 
 </script>
