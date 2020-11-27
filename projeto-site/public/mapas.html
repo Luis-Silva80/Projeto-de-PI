@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
     <link rel="shortcut icon" href="imgs/cs.ico" type="">
+
+    <script type="text/javascript" src="slide.js"></script>
+
 </head>
 
 <body>
@@ -46,6 +49,7 @@
                     beatae rem blanditiis magnam ipsum minima aspernatur, recusandae in autem pariatur totam asperiores
                     vitae labore.</p>
                 <img id="img_mapas" src="./imgs/mapas.png" alt="">
+                <img id="img_mapas2" src="" alt="">
             </div>
         </div>
 
@@ -74,96 +78,6 @@
         }
     }
 
-    function sorteia() {
-        for (var i = 0; i < 1; i++) {
-            div_sorteio.innerHTML = '';
-            var numero_sorteado = parseInt((Math.random() * 7) + 1);
-
-            var mirage = numero_sorteado == 1;
-            var overpass = numero_sorteado == 2;
-            var inferno = numero_sorteado == 3;
-            var dust2 = numero_sorteado == 4;
-            var nuke = numero_sorteado == 5;
-            var cache = numero_sorteado == 6;
-
-
-            div_sorteio.innerHTML += `${numero_sorteado}<br>`
-
-            if (mirage) {
-
-                nome_mapa.innerHTML = 'Mirage';
-                resultado.innerHTML = 'mirage';
-                mapmirage();
-
-
-            } else if (overpass) {
-
-                img_mapas.src = './imgs/map-overpass.jpg';
-                nome_mapa.innerHTML = 'Overpass';
-                resultado.innerHTML = 'overpass';
-            } else if (inferno) {
-
-                img_mapas.src = './imgs/map-inferno.jpg';
-                nome_mapa.innerHTML = 'Inferno';
-                resultado.innerHTML = 'inferno';
-            } else if (dust2) {
-
-                nome_mapa.innerHTML = 'Dust2';
-                img_mapas.src = './imgs/map-d2.jpg';
-                resultado.innerHTML = 'dust2';
-            } else if (nuke) {
-
-                img_mapas.src = './imgs/map-nuke.jpg';
-                nome_mapa.innerHTML = 'Nuke';
-                resultado.innerHTML = 'nuke';
-            } else if (cache) {
-
-                img_mapas.src = './imgs/map-cache.jpg';
-                nome_mapa.innerHTML = 'Cache';
-                resultado.innerHTML = 'Cache';
-            } else {
-
-                img_mapas.src = './imgs/map-train.jpg';
-                nome_mapa.innerHTML = 'Train';
-                resultado.innerHTML = 'train';
-            }
-        }
-    }
-
-
-    var intervalo = 2000;
-
-    function mapmirage() {
-        img_mapas.src = './imgs/map-mirage.jpg';
-        setTimeout("mirageA()", intervalo);
-    }
-
-    function mirageA() {
-        img_mapas.src = './imgs/mirage-bA.jpg';
-        setTimeout("mirageMeio()", intervalo);
-    }
-
-    function mirageMeio() {
-        img_mapas.src = './imgs/mirage-meio.jpg';
-        setTimeout("mirageB()", intervalo);
-    }
-
-    function mirageB() {
-        img_mapas.src = './imgs/mirage-bB.jpg';
-        setTimeout("mirageCold()", intervalo);
-    }
-    function mirageCold() {
-        img_mapas.src = './imgs/mirage-bB-cold.jpg';
-        setTimeout("mapmirage()", intervalo);
-    }
-
-
-
-    function mapoverpass(){
-        
-    }
-
-
-
+    
 
 </script>
