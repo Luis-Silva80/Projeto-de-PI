@@ -21,8 +21,9 @@ function sorteia() {
 
             img_mapas.style.display = 'block';
             img_mapas2.style.display = 'none';
+            img_mapas3.style.display = 'none';
             mapmirage();
-            
+
 
         } else if (overpass) {
 
@@ -31,12 +32,19 @@ function sorteia() {
 
             img_mapas.style.display = 'none';
             img_mapas2.style.display = 'block';
+            img_mapas3.style.display = 'none';
+
             mapoverpass();
         } else if (inferno) {
 
-            img_mapas.src = './imgs/map-inferno.jpg';
             nome_mapa.innerHTML = 'Inferno';
             resultado.innerHTML = 'inferno';
+
+            img_mapas.style.display = 'none';
+            img_mapas2.style.display = 'none';
+            img_mapas3.style.display = 'block';
+
+            mapInferno();
         } else if (dust2) {
 
             nome_mapa.innerHTML = 'Dust2';
@@ -93,22 +101,56 @@ function mirageCold() {
 
 
 
-function mapoverpass(){
+function mapoverpass() {
     img_mapas2.src = './imgs/map-overpass.jpg';
     setTimeout("overpassA()", intervalo);
 }
 
-function overpassA(){
+function overpassA() {
     img_mapas2.src = './imgs/overpass-bA.jpg';
     setTimeout("overpassRua()", intervalo);
 }
 
-function overpassRua(){
+function overpassRua() {
     img_mapas2.src = './imgs/overpass-rua.jpg';
     setTimeout("overpassFundo()", intervalo);
 }
 
-function overpassFundo(){
+function overpassFundo() {
     img_mapas2.src = './imgs/overpass-fundo.jpg';
+    setTimeout("overpassB()", intervalo);
+}
+
+function overpassB(){
+    img_mapas2.src = './imgs/overpass-bB.jpg';
     setTimeout("mapoverpass()", intervalo);
+}
+
+
+
+
+
+function mapInferno(){
+    img_mapas3.src = './imgs/map-inferno.jpg';
+    setTimeout("infernoA()", intervalo);
+}
+
+function infernoA(){
+    img_mapas3.src = './imgs/inferno-bA.png';
+    setTimeout("infernoMeio()", intervalo);
+}
+
+function infernoMeio(){
+    img_mapas3.src = './imgs/inferno-meio.jpg';
+    setTimeout("infernoBanana()", intervalo);
+}
+
+function infernoBanana(){
+    img_mapas3.src = './imgs/inferno-banana.jpg';
+    setTimeout("infernoB()", intervalo);
+}
+
+function infernoB(){
+    img_mapas3.src = './imgs/inferno-bB.jpg';
+    setTimeout("mapInferno()", intervalo);
 }
