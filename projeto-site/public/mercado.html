@@ -22,17 +22,18 @@
 
     verificar_autenticacao();
 
-    
+
 </script>
+
 <body onload="verificar_autenticacao()">
 
     <header>
         <div class="container">
-            <img onclick="fecha_menu()" class="imgs" src="imgs/icone_fechar.png" alt="" id="fecha_btn">
-            <img onclick="abre_menu()" style="display: none;" class="imgs" src="imgs/menu_hamburguer.png" alt="" id="abre_btn">
-
+            <i class="fas fa-times" onclick="fecha_menu()" id="fecha_btn"></i>
+            <i class="fas fa-bars" onclick="abre_menu()" id="abre_btn" style="display: none;"></i>
+            <li class="user">Olá, <b id="b_usuario"></b></li>
             <ul class="animate-down">
-                <li class="items">Olá, <b id="b_usuario"></b></li>
+
                 <li class="items current">Mercado</li>
                 <li class="items"><a href="./mapas.html"> Mapas</a></li>
                 <li class="items"><a onclick="logoff()">LOGOUT</a></li>
@@ -43,7 +44,7 @@
     <div class="conteudo">
         <aside id="menu">
             <h1>Armas</h1>
-    
+
             <div class="armas" onclick="ak()">
                 <img src="imgs/ak47.png" alt="" id="imas">
                 <span id="text">AK-47</span>
@@ -64,57 +65,57 @@
                 <img src="imgs/faca.png" alt="" id="imas5">
                 <span id="text5">Facas</span>
             </div>
-    
+
         </aside>
-    
+
         <div class="box-menu" id="box-menu">
             <div class="cont">
                 <div class="header">
                     <p id="modelo">Modelo da Arma</p>
                 </div>
-    
+
                 <div class="descri">
                     <h2 id="arma1">Titulo da Arma</h2>
                     <div class="armas-box">
                         <div class="item">
-                            <p>Float:</p>
-                            <p>Raridade:</p>
-                            <p>Preço:</p>
+                            <p id="float1">Float:</p>
+                            <p id="raridade1">Raridade:</p>
+                            <p id="preco1">Preço:</p>
                         </div>
                         <img src="imgs/log_mibr.jpg" alt="" class="img .animate-troca" id="img1">
                     </div>
                 </div>
-    
+
                 <div class="descri">
                     <h2 id="arma2">Titulo da Arma</h2>
                     <div class="armas-box">
                         <img src="imgs/log_mibr.jpg" alt="" class="img .animate-troca" id="img2">
                         <div class="item">
-                            <p>Float:</p>
-                            <p>Raridade:</p>
-                            <p>Preço:</p>
+                            <p id="float2">Float:</p>
+                            <p id="raridade2">Raridade:</p>
+                            <p id="preco2">Preço:</p>
                         </div>
-    
+
                     </div>
                 </div>
-    
+
                 <div class="descri">
                     <h2 id="arma3">Titulo da Arma</h2>
                     <div class="armas-box">
                         <div class="item">
-                            <p>Float:</p>
-                            <p>Raridade:</p>
-                            <p>Preço:</p>
+                            <p id="float3">Float:</p>
+                            <p id="raridade3">Raridade:</p>
+                            <p id="preco3">Preço:</p>
                         </div>
                         <img src="imgs/log_mibr.jpg" alt="" class="img .animate-troca" id="img3">
                     </div>
                 </div>
-    
+
             </div>
         </div>
     </div>
 
-    
+
     <footer>
         <div class="container">
             <div class="redes">
@@ -124,13 +125,34 @@
             </div>
         </div>
     </footer>
-    
+
 
 </body>
 
 </html>
 
 <script>
+
+
+    var arma = {
+        Float: '',
+        raridade: '',
+        preco: ''
+    }
+
+    var arma2 = {
+        Float: '',
+        raridade: '',
+        preco: ''
+    }
+
+    var arma2 = {
+        Float: '',
+        raridade: '',
+        preco: ''
+    }
+
+
 
     function fecha_menu() {
         document.getElementById("menu").style.width = "8%";
@@ -165,15 +187,68 @@
     arma3.innerHTML += '';
 
     function ak() {
+
+        arma1.Float = '00001'
+        arma1.raridade = 'Nova de Fabrica'
+        arma1.preco = 'R$ 5.228,04'
+
+        arma2.Float = '00001'
+        arma2.raridade = 'Nova de Fabrica'
+        arma2.preco = 'R$ 2.945,38'
+
+        arma3.Float = '00001'
+        arma3.raridade = 'Pouco Usada'
+        arma3.preco = 'R$ 8.173, 14'
+
+        float1.innerHTML = `Float: ${arma1.Float}`
+        raridade1.innerHTML = `Raridade: ${arma1.raridade}`;
+        preco1.innerHTML = `Preço: ${arma1.preco}`;
+
+        float2.innerHTML = `Float: ${arma2.Float}`
+        raridade2.innerHTML = `Raridade: ${arma2.raridade}`;
+        preco2.innerHTML = `Preço: ${arma2.preco}`;
+
+        float3.innerHTML = `Float: ${arma3.Float}`
+        raridade3.innerHTML = `Raridade: ${arma3.raridade}`;
+        preco3.innerHTML = `Preço: ${arma3.preco}`;
+
+
+
         modelo.innerHTML = 'AK-47';
         arma1.innerHTML = 'Assimov';
         arma2.innerHTML = 'Imperatriz';
-        arma3.innerHTML = 'Nevóa-Frontal';
+        arma3.innerHTML = 'Hidroponica';
         img1.src = "./imgs/ak-assimov.png";
         img2.src = "./imgs/ak-imperatriz.jpg";
-        img3.src = "./imgs/ak-nevoa.png";
+        img3.src = "./imgs/ak-hidro.jpg";
     }
     function awp() {
+
+        arma1.Float = '00002'
+        arma1.raridade = 'Testada Em Campo'
+        arma1.preco = 'R$ 1.284,00'
+
+        arma2.Float = '00002'
+        arma2.raridade = 'Nova de Fabrica'
+        arma2.preco = 'R$ 317.000,00'
+
+        arma3.Float = '00002'
+        arma3.raridade = 'Pouco Usada'
+        arma3.preco = 'R$ 8.000,00'
+
+        float1.innerHTML = `Float: ${arma1.Float}`
+        raridade1.innerHTML = `Raridade: ${arma1.raridade}`;
+        preco1.innerHTML = `Preço: ${arma1.preco}`;
+
+        float2.innerHTML = `Float: ${arma2.Float}`
+        raridade2.innerHTML = `Raridade: ${arma2.raridade}`;
+        preco2.innerHTML = `Preço: ${arma2.preco}`;
+
+        float3.innerHTML = `Float: ${arma3.Float}`
+        raridade3.innerHTML = `Raridade: ${arma3.raridade}`;
+        preco3.innerHTML = `Preço: ${arma3.preco}`;
+
+
         modelo.innerHTML = 'AWP';
         arma1.innerHTML = 'Assimov';
         arma2.innerHTML = 'Dragon Lore';
@@ -183,15 +258,66 @@
         img3.src = "./imgs/awp-gunter.jpg";
     }
     function pistol() {
+
+
+        arma1.Float = '00002'
+        arma1.raridade = 'Pouco Usada'
+        arma1.preco = 'R$ 2.340,48'
+
+        arma2.Float = '00002'
+        arma2.raridade = 'Nova de Fabrica'
+        arma2.preco = 'R$ 300,62'
+
+        arma3.Float = '00002'
+        arma3.raridade = 'Pouco Usada'
+        arma3.preco = 'R$ 2.469,08'
+
+        float1.innerHTML = `Float: ${arma1.Float}`
+        raridade1.innerHTML = `Raridade: ${arma1.raridade}`;
+        preco1.innerHTML = `Preço: ${arma1.preco}`;
+
+        float2.innerHTML = `Float: ${arma2.Float}`
+        raridade2.innerHTML = `Raridade: ${arma2.raridade}`;
+        preco2.innerHTML = `Preço: ${arma2.preco}`;
+
+        float3.innerHTML = `Float: ${arma3.Float}`
+        raridade3.innerHTML = `Raridade: ${arma3.raridade}`;
+        preco3.innerHTML = `Preço: ${arma3.preco}`;
+
         modelo.innerHTML = 'PISTOLS';
         arma1.innerHTML = 'Blaze';
         arma2.innerHTML = 'Cortex';
-        arma3.innerHTML = 'FlashBack';
+        arma3.innerHTML = 'Printstream';
         img1.src = "./imgs/desert-blaze.jpg";
         img2.src = "./imgs/usp-cortex.jpg_large";
-        img3.src = "./imgs/usp-flash.jpg";
+        img3.src = "./imgs/desert-print.jpg";
     }
     function m4() {
+
+        arma1.Float = '0.003'
+        arma1.raridade = 'Nova de fabrica'
+        arma1.preco = 'R$ 690.000,00'
+
+        arma2.Float = '00002'
+        arma2.raridade = 'Nova de Fabrica'
+        arma2.preco = 'R$ 10.263,37'
+
+        arma3.Float = '00002'
+        arma3.raridade = 'Nova de Fabrica'
+        arma3.preco = 'R$ 375,37'
+
+        float1.innerHTML = `Float: ${arma1.Float}`
+        raridade1.innerHTML = `Raridade: ${arma1.raridade}`;
+        preco1.innerHTML = `Preço: ${arma1.preco}`;
+
+        float2.innerHTML = `Float: ${arma2.Float}`
+        raridade2.innerHTML = `Raridade: ${arma2.raridade}`;
+        preco2.innerHTML = `Preço: ${arma2.preco}`;
+
+        float3.innerHTML = `Float: ${arma3.Float}`
+        raridade3.innerHTML = `Raridade: ${arma3.raridade}`;
+        preco3.innerHTML = `Preço: ${arma3.preco}`;
+
         modelo.innerHTML = 'M4';
         arma1.innerHTML = 'Howl';
         arma2.innerHTML = 'Imperador';
@@ -201,6 +327,31 @@
         img3.src = "./imgs/m4-rei.jpg";
     }
     function faca() {
+
+        arma1.Float = '0.003'
+        arma1.raridade = 'Desbotada'
+        arma1.preco = 'R$ 8.489,00'
+
+        arma2.Float = '00002'
+        arma2.raridade = 'Sabedoria'
+        arma2.preco = 'R$ 3.643,17'
+
+        arma3.Float = '00002'
+        arma3.raridade = 'Doppler'
+        arma3.preco = 'R$ 2.312'
+
+        float1.innerHTML = `Float: ${arma1.Float}`
+        raridade1.innerHTML = `Raridade: ${arma1.raridade}`;
+        preco1.innerHTML = `Preço: ${arma1.preco}`;
+
+        float2.innerHTML = `Float: ${arma2.Float}`
+        raridade2.innerHTML = `Raridade: ${arma2.raridade}`;
+        preco2.innerHTML = `Preço: ${arma2.preco}`;
+
+        float3.innerHTML = `Float: ${arma3.Float}`
+        raridade3.innerHTML = `Raridade: ${arma3.raridade}`;
+        preco3.innerHTML = `Preço: ${arma3.preco}`;
+
         modelo.innerHTML = 'FACAS';
         arma1.innerHTML = 'Butterfly';
         arma2.innerHTML = 'Karambit';
