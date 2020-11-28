@@ -20,20 +20,28 @@
     <link rel="shortcut icon" href="imgs/cs.ico" type="">
 
     <script type="text/javascript" src="slide.js"></script>
+    <script type="text/javascript" src="funcoes.js"></script>
 
 </head>
+<script>
 
-<body>
+    let usuario;
+
+    verificar_autenticacao();
+
+    
+</script>
+<body onload="verificar_autenticacao()">
 
     <header class="animate-down">
 
         <div class="container">
             <img src="imgs/eu.jpg" alt="">
-            <ul>
-                <li class="current items"> home</li>
-                <li class="items"><a href="./times.html">Times</a></li>
-                <li class="items"><a href="./login.html">Mercado</a></li>
-                <li class="items"><a href="login.html">login</a></li>
+            <ul class="animate-down">
+                <li class="items">Olá, <b id="b_usuario"></b></li>
+                <li class="items"> <a href="./mercado.html"> Mercado</a></li>
+                <li class="items current">Mapas</li>
+                <li class="items"><a onclick="logoff()">LOGOUT</a></li>
             </ul>
         </div>
     </header>
@@ -45,40 +53,37 @@
                 <h1 id="nome_mapa">Mapas</h1>
             </div>
             <div class="cont">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ducimus quis officia unde nemo odio
-                    beatae rem blanditiis magnam ipsum minima aspernatur, recusandae in autem pariatur totam asperiores
-                    vitae labore.</p>
+               <div class="bt">
+                <button onclick="sorteia()">Sorteia um mapa</button>
+               </div>
+               
                 <img id="img_mapas" src="./imgs/mapas.png" alt="">
                 <img id="img_mapas2" src="" alt="" style="display: none;">
                 <img id="img_mapas3" src="" alt="" style="display: none;">
+                <img id="img_mapas4" src="" alt="" style="display: none;">
+                <img id="img_mapas5" src="" alt="" style="display: none;">
+                <img id="img_mapas6" src="" alt="" style="display: none;">
+                <img id="img_mapas7" src="" alt="" style="display: none;">
             </div>
         </div>
 
     </div>
-    Digite uma arma do game <input type="text" id="in_armas"><br>
+    <!-- Digite uma arma do game <input type="text" id="in_armas"><br>
     <button onclick="cadastrar()">Cadastrar</button><br>
     <button onclick="sorteia()">Sorteia um mapa</button>
     <b id="b_awp"></b><br><br>
     <div id="div_sorteio"></div><br>
-    <div id="resultado"></div>
+    <div id="resultado"></div> -->
+    <footer>
+        <div class="container">
+            <div class="redes">
+                <i target="blank" href="https://www.instagram.com/luis80silva/" class="fab fa-instagram"></i>
+                <i href="https://steamcommunity.com/profiles/76561198874604283/" class="fab fa-steam"></i>
+                <i href="https://github.com/Luis-Silva80" class="fab fa-github"></i>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
 </html>
-
-<script>
-
-    function cadastrar() {
-        var awp = in_armas.value;
-        var awp_verifica = awp == 'AWP' || awp == 'awp';
-
-        if (awp_verifica) {
-            b_awp.innerHTML = 'Sua arma favorita é a AWP';
-        } else {
-            b_awp.innerHTML = 'Sua arma favorita não é a AWP';
-        }
-    }
-
-    
-
-</script>

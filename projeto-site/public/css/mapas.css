@@ -1,17 +1,15 @@
 
 .conteudo{
     width: 100%;
-    height: auto;
-    background-color: black;
-    padding: 30px 0;
+    height: 80vh;
+    background-color: #111212;
+    padding: 55px 0 0 0;
 }
 
 .conteudo .container{
     width: 80%;
     margin: auto;
     height: auto;
-    /* background-color: thistle; */
-    padding-top: 40px;
     box-shadow: 0px 10px 15px rgba(0,0,0,.5);
     overflow: hidden;
     border: 5px white solid;
@@ -32,24 +30,61 @@
     width: 85%;
     margin: 0 auto;
     height: 600px;
-    /* background-color: thistle; */
     display: flex;
     /* justify-content: center; */
-    align-items: center;
-    
+    padding-bottom: 20px;
     
 }
 
-.conteudo .container .cont p{
-    width: 40%;
+
+.conteudo .container .cont .bt{
+    width: 400px;
+    height: 530px;
+    display: flex;
+    /* background-color: azure; */
+    /* justify-content: center; */
+    align-items: center;
+    margin-right: 10px;
+    padding-top: 40px;
+}
+
+.cont .bt button{
+    width: 320px;
+    height: 500px;
+    position: absolute;
+    /* background-color: black; */
+    font-weight: 500;
+    font-size: 20px;
+    font-family: 'CSGO';
     color: white;
+    border: 2px white solid;
+    cursor: pointer;
+    transition-duration: 600ms;
+    border-radius: 20px;
+    background: url(../imgs/interrogacao.jpg) center;
+}
+
+.cont .bt button:hover{
+    transform: scale(1.2);
+    border-radius: 20px;
+    /* background-color: #1c1c1c; */
+}
+
+.img{
+    background-color: rgb(64, 61, 66);
+    width: 500px;
+    height: 300px;
+    margin:0 10px;
 
 }
 
 .conteudo .container .cont img{
-    width: 60%;
+    width: 70%;
     height: 600px;
     background-color: black;
+    margin: 10px 0px;
+    border-radius: 10px;
+    border: 2px white solid;
     /* background: url() center; */
 }
 

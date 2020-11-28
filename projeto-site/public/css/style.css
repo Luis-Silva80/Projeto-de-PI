@@ -216,4 +216,10 @@ footer .container .redes{
     font-size: 85px;
     padding: 0px 30px;
     color: white;
+    cursor: pointer;
+    transition-duration: 615ms;
+}
+
+.container .redes i:hover{
+    transform: scale(1.4);
 }
