@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url(../imgs/steam.jpg);
+    background: url(../imgs/steam.jpg) center no-repeat ;
     height: 100vh;
 }
 
@@ -41,9 +41,12 @@ header{
     width: 80%;
     margin: 10px auto;
     height: auto;
-    /* align-items: center; */
+    align-items: center;
     color: white;
     line-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     /* background-color: black; */
 }
 
@@ -51,15 +54,16 @@ header{
     color: white;
     margin-bottom: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     /* background-color: blueviolet; */
     font-family: 'CSGO';
     font-size: 30px;
+    margin: 0 auto;
 }
 
 
 .conteudo .form .container2 .fullbox input{
-    margin:auto 10px;
+    margin:auto 25px;
     height: 20px;
     width: 200px;
     border-radius: 5px;
@@ -71,17 +75,8 @@ header{
 }
 
 
-.conteudo .form .acesso{
-    width: 80%;
-    height: 100px;
-    margin: auto;
-    /* background-color: yellow; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.conteudo .form button{
-    width: 25%;
+.conteudo .container2 form button{
+    width: auto;
     border: 4px white solid;
     color: white;
     height: 40px;
@@ -91,6 +86,19 @@ header{
     font-family: 'CSGO';
     font-size: 1.7rem;
 }
+
+button{
+    width: auto;
+    border: 4px white solid;
+    color: white;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #363636;
+    margin-left: 5%;
+    font-family: 'CSGO';
+    font-size: 1.7rem;
+}
+
 
 footer{
     background-color: rgb(34, 30, 30);
