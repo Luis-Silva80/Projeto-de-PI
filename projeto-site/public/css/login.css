@@ -109,7 +109,7 @@ header{
 }
 
 .container2  button {
-    width: 20%;
+    width: auto;
     border: 4px white solid;
     color: white;
     height: 30px;
