@@ -7,15 +7,22 @@ body {
 
 header{
     background-color: rgb(34, 30, 30);
+    
+}
+
+
+header ul a {
+    color: rgb(83, 82, 82);
 }
 
 /*  */
 
 .conteudo{
     width: 100%;
-    height: auto;
+    height: 75vh;
     background: url(../imgs/steam.jpg) center no-repeat;
     padding: 20px 0;
+    
 }
 
 .conteudo .form{
@@ -25,6 +32,7 @@ header{
     box-shadow: 0px 10px 15px rgba(0,0,0,.5);
     overflow: hidden;
     border: 4px black solid;
+    
 
 }
 
@@ -77,22 +85,22 @@ header{
 
 
 .conteudo .container2 form button{
-    width: auto;
+    width: 180px;
     border: 4px white solid;
     color: white;
-    height: 40px;
+    height: 46px;
     border-radius: 20px;
     background-color: #363636;
-    margin-left: 38%;
+    margin-left: 192px;
     font-family: 'CSGO';
     font-size: 1.7rem;
 }
 
 button{
-    width: auto;
+    width: 180px;
     border: 4px white solid;
     color: white;
-    height: 40px;
+    height: 46px;
     border-radius: 20px;
     background-color: #363636;
     margin-left: 5%;
