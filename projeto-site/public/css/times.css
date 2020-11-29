@@ -60,6 +60,7 @@ header {
     /* position: relative; */
     /* z-index: 3; */
     border-radius: 10px;
+    position: relative;
 }
 
 .info p{
@@ -100,12 +101,9 @@ header {
 .line {
     width: 70%;
     height: 450px;
-    /* background-color: lawngreen; */
     border-radius: 10px;
     box-shadow: 0px 10px 15px rgba(0,0,0,.5);
     overflow: hidden;
-    /* transition-delay: 3s; */
-
 }
 
 /* fim do conteudo */
