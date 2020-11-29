@@ -230,9 +230,14 @@ footer .container .redes{
     padding: 0px 30px;
     color: white;
     cursor: pointer;
+    
+}
+
+.container .redes a i{
     transition-duration: 615ms;
 }
 
-.container .redes a:hover{
+
+.container .redes i:hover{
     transform: scale(1.4);
 }
