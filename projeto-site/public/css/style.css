@@ -213,19 +213,19 @@ footer .container {
     justify-content: space-between;
     /* background-color: greenyellow; */
 }
-
+/* 
 footer a{
-    background-color:black;
+    /* background-color:black;
     color: white;
     font-size: 60px;
     padding: 0 30px;
-}
+} */
 
 footer .container .redes{
     margin: auto;
 }
 
-.container .redes i{
+.container .redes a{
     font-size: 85px;
     padding: 0px 30px;
     color: white;
@@ -233,6 +233,6 @@ footer .container .redes{
     transition-duration: 615ms;
 }
 
-.container .redes i:hover{
+.container .redes a:hover{
     transform: scale(1.4);
 }
