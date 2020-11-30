@@ -12,30 +12,21 @@ function sorteia() {
 
 
         if (mirage) {
-
-
             nome_mapa.innerHTML = 'Mirage';
-            mostra('block','none','none','none','none','none','none');
-
+            mostra('block','none','none','none','none','none','none');8
             mapmirage();
 
 
         } else if (overpass) {
-
             nome_mapa.innerHTML = 'Overpass';
-
             mostra('none','block','none','none','none','none','none');
             mapoverpass();
         } else if (inferno) {
-
             nome_mapa.innerHTML = 'Inferno';
-
             mostra('none','none','block','none','none','none','none');
             mapInferno();
         } else if (dust2) {
-
             nome_mapa.innerHTML = 'Dust2';
-
             mostra('none','none','none','block','none','none','none');
             mapDust2();
         } else if (nuke) {
