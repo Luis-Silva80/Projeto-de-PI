@@ -100,9 +100,20 @@ header ul a {
 /* fim dos inputs */
 
 .container2 .acesso {
-    /* background-color: #363636; */
+    display: flex;
+      /* background-color: #363636; */
     padding-top: 10px;
+    align-items: center;
+    justify-content: space-between;
 }
+
+.container2 .acesso #img_aguarde{
+    border-radius: 10px;
+    width:150px;
+    margin:0 200px 45px 0;
+    display: none;
+}
+
 
 .container2 .acesso .main {
     /* background-color: #363636; */
@@ -119,7 +130,7 @@ header ul a {
     height: 42px;
     border-radius: 20px;
     background-color: #363636;
-    margin-left: 38%;
+    /* margin-left: 38%; */
     font-family: 'CSGO';
     font-size: 1.7rem;
 

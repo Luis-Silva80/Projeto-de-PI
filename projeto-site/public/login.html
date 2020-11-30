@@ -13,10 +13,11 @@
     <link rel="shortcut icon" href="imgs/cs.ico" type="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
+
 <body>
     <header>
         <div class="container">
-            <img src="imgs/eu.jpg" alt="">            
+            <img src="imgs/eu.jpg" alt="">
             <ul class="animate-down">
                 <li class="items"><a href="index.html">home</a></li>
                 <li class="items"><a href="times.html">Times</a></li>
@@ -34,20 +35,25 @@
                 </header>
                 <div class="container2">
                     <form id="form_login" method="post" onsubmit="return entrar()">
-                        
+
                         <div class="fullbox">
                             <label>Digite seu nick</label>
-                            <input name="login" type="text" id="nick">
+                            <input name="login" type="text" id="nick" required minlength="3">
                         </div>
                         <div class="fullbox">
                             <label>Senha</label>
-                            <input name="senha" type="password" id="senha">
+                            <input name="senha" type="password" id="senha" required minlength="3">
                         </div>
                         <button id="btn_entrar">Login</button>
                     </form>
                     <div class="acesso">
                         <div class="main">
-                            <button onclick="limpar()" class="btn2">Limpar</button>
+                            <button onclick="limpar()" class="btn2" id="limpar">Limpar</button>
+                        </div>
+                        <img src="imgs/cs.gif" id="img_aguarde" >
+
+                        <div id="div_erro" style="background-color: #bf8899; color: maroon; display: none;">
+                            Erro no cadastro
                         </div>
                     </div>
                 </div>
@@ -86,7 +92,7 @@
 
 
     function entrar() {
-        // aguardar();
+        aguardar();
         var formulario = new URLSearchParams(new FormData(form_login));
         fetch("/usuarios/autenticar", {
             method: "POST",
@@ -109,7 +115,7 @@
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    // finalizar_aguardar(texto);
+                    finalizar_aguardar(texto);
                 });
             }
         });
@@ -119,15 +125,16 @@
 
     function aguardar() {
         btn_entrar.disabled = true;
-        img_aguarde.style.visibility = 'visible';
-        div_erro.style.visibility = 'hidden';
+        limpar.disabled = true;
+        img_aguarde.style.display='block';
+        div_erro.style.display='none';
     }
 
-    function finalizar_aguardar(resposta) {
+    function finalizar_aguardar() {
         btn_entrar.disabled = false;
-        img_aguarde.style.visibility = 'hidden';
-        div_erro.style.visibility = 'visible';
-        div_erro.innerHTML = resposta;
+        limpar.disabled = false;
+        img_aguarde.style.display='none';
+        div_erro.style.display='block';
     }
 
 

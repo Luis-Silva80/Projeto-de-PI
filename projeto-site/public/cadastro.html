@@ -39,22 +39,25 @@
                 <form id="form_cadastro" method="POST" onsubmit="return cadastrar()">
                     <div class="fullbox">
                         <label>Digite seu nome</label>
-                        <input name="nome" type="text" id="nome">
+                        <input name="nome" type="text" id="nome" required minlength="4">
                     </div>
                     <div class="fullbox">
                         <label>Digite seu Nickname</label>
-                        <input name="login" type="text" id="login">
+                        <input name="login" type="text" id="login" required minlength="4">
                     </div>
                     <div class="fullbox">
                         <label>Digite sua senha</label>
-                        <input name="senha" type="password" id="senha">
+                        <input name="senha" type="password" id="senha" required minlength="4">
                     </div>
                     <button id="cadastro">Cadastrar</button>
                 </form>
-                <button onclick="limpar()" class="btn2">Limpar</button>
-                <!-- <div id="div_erro" style="background-color: #bf8899; color: maroon; display: none;">
+                
+                <button onclick="limpar()" class="btn2" id="limpar">Limpar</button>
+                <img src="imgs/cs.gif" id="img_aguarde" style="display: none;" width="100px">
+    
+                <div id="div_erro" style="background-color: #bf8899; color: maroon; display: none;">
                     Erro no cadastro
-                </div> -->
+                </div>
             </div>
         </div>
 
@@ -75,24 +78,14 @@
 
 
 <script>
-    // document.querySelector('#form1').addEventListener('submit', function (e) {
-    //     e.preventDefault();
-    //     cadastrar();
-    // })
     function limpar() {
         document.getElementById('nome').value = '';
         document.getElementById('nick').value = '';
         document.getElementById('senha').value = '';
     }
-    function cadastrar() {
-        window.location.href = 'login.html';
-        console.log('entrou')
-    }
-
-
 
     function cadastrar() {
-        // aguardar();
+        aguardar();
         var formulario = new URLSearchParams(new FormData(form_cadastro));
         fetch("/usuarios/cadastrar", {
             method: "POST",
@@ -109,10 +102,25 @@
                 response.text().then(function (resposta) {
                     div_erro.innerHTML = resposta;
                 });
-                // finalizar_aguardar();
+                finalizar_aguardar();
             }
         });
 
         return false;
+    }
+
+
+    function aguardar() {
+        cadastro.disabled = true;
+        limpar.disabled = true;
+        img_aguarde.style.display='block';
+        div_erro.style.display='none';
+    }
+
+    function finalizar_aguardar() {
+        cadastro.disabled = false;
+        limpar.disabled = false;
+        img_aguarde.style.display='none';
+        div_erro.style.display='block';
     }
 </script>
