@@ -188,7 +188,7 @@ header ul a:hover {
 
 footer {
     width: 100%;
-    height: 160px;
+    height: 140px;
     background-color: #4f3b2f;
     border-top: 5px rgb(29, 29, 29) solid;
 }
@@ -196,7 +196,7 @@ footer {
 footer .container {
     width: 80%;
     margin: auto;
-    height: 160px;
+    height: 140px;
     display: flex;
     justify-content: space-between;
 }

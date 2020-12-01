@@ -45,24 +45,24 @@
             <h1>Armas</h1>
 
             <div class="armas" onclick="ak()">
-                <img src="imgs/ak47.png" alt="" id="imas">
-                <span id="text">AK-47</span>
+                <img src="imgs/ak47.webp" alt="" id="imas">
+                <span id="text" class="texto">AK-47</span>
             </div>
             <div class="armas" onclick="awp()">
                 <img src="imgs/awp.png" alt="" id="imas">
-                <span id="text2">AWP</span>
+                <span id="text2" class="texto">AWP</span>
             </div>
             <div class="armas" onclick="pistol()">
                 <img src="imgs/pistol.png" alt="" id="imas3">
-                <span id="text3">Pistols</span>
+                <span id="text3" class="texto">Pistols</span>
             </div>
             <div class="armas" onclick="m4()">
                 <img src="imgs/m4.png" alt="" id="imas4">
-                <span id="text4">M4</span>
+                <span id="text4" class="texto">M4</span>
             </div>
             <div class="armas" onclick="faca()">
                 <img src="imgs/faca.png" alt="" id="imas5">
-                <span id="text5">Facas</span>
+                <span id="text5" class="texto">Facas</span>
             </div>
 
         </aside>
@@ -81,14 +81,14 @@
                             <p id="raridade1">Raridade:</p>
                             <p id="preco1">Preço:</p>
                         </div>
-                        <img src="imgs/log_mibr.jpg" alt="" class="img .animate-troca" id="img1">
+                        <img src="imgs/csgo_caixas.png" alt="" class="img .animate-troca" id="img1">
                     </div>
                 </div>
 
                 <div class="descri">
                     <h2 id="armas2">Titulo da Arma</h2>
                     <div class="armas-box">
-                        <img src="imgs/log_mibr.jpg" alt="" class="img .animate-troca" id="img2">
+                        <img src="imgs/csgo_caixas.png"" alt="" class="img .animate-troca" id="img2">
                         <div class="item">
                             <p id="float2">Float:</p>
                             <p id="raridade2">Raridade:</p>
@@ -106,7 +106,7 @@
                             <p id="raridade3">Raridade:</p>
                             <p id="preco3">Preço:</p>
                         </div>
-                        <img src="imgs/log_mibr.jpg" alt="" class="img .animate-troca" id="img3">
+                        <img src="imgs/csgo_caixas.png"" alt="" class="img .animate-troca" id="img3">
                     </div>
                 </div>
 
@@ -158,12 +158,11 @@
         document.getElementById("box-menu").style.width = "92%";
         document.getElementById("abre_btn").style.display = "block";
         document.getElementById("fecha_btn").style.display = "none";
-        document.getElementById("text").innerHTML = '';
-        document.getElementById("text3").innerHTML = '';
-        document.getElementById("text2").innerHTML = '';
-        document.getElementById("text4").innerHTML = '';
-        document.getElementById("text5").innerHTML = '';
-        document.getElementById("imas").style.width = "100px"
+        document.getElementById("text").style.opacity = 0;
+        document.getElementById("text3").style.opacity = 0;
+        document.getElementById("text2").style.opacity = 0;
+        document.getElementById("text4").style.opacity = 0;
+        document.getElementById("text5").style.opacity = 0;
 
     }
 
@@ -172,12 +171,11 @@
         document.getElementById("box-menu").style.width = "80%";
         document.getElementById("fecha_btn").style.display = "block";
         document.getElementById("abre_btn").style.display = "none";
-        document.getElementById("text").innerHTML = 'AK-47';
-        document.getElementById("text2").innerHTML = 'AWP';
-        document.getElementById("text3").innerHTML = 'Pistols';
-        document.getElementById("text4").innerHTML = 'M4';
-        document.getElementById("text5").innerHTML = 'Facas';
-        document.getElementById("imas").style.width = "initial";
+        document.getElementById("text").style.opacity = 1;
+        document.getElementById("text2").style.opacity = 1;
+        document.getElementById("text3").style.opacity = 1;
+        document.getElementById("text4").style.opacity = 1;
+        document.getElementById("text5").style.opacity = 1;  
 
     }
 

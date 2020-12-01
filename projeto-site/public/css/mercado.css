@@ -19,8 +19,7 @@ aside {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition-duration: 460ms;
-    /* float: left; */
+    transition-duration: 550ms;
     font-family:'CSGO';
     font-weight: 800;
 
@@ -57,24 +56,28 @@ aside a{
     justify-content: space-around;
     display: flex;
     cursor: pointer;
-    line-height: 180px;
+    line-height: 140px;
     transition: 800ms;
 }
 
 .armas:hover{
-    background-color: rgb(155, 22, 22);
+    background-color: black;
     transform: scale(1.07);
 }
 
 .armas img{
     width: 80px;
-    margin-top: 40px;
+    /* margin-top: 40px; */
     margin-right: 10px;
 }
 
 .armas span{
     font-size: 20px;
     font-family:'Noto Sans KR', sans-serif;
+}
+
+.armas .texto{
+    transition: 500ms;
 }
 
 /* FIM DO ASIDE */
@@ -94,7 +97,7 @@ aside a{
     padding: 10px 0;
     height: auto;
     background-color: #C4C4C4;
-    
+    transition-duration: 200ms;
 }
 
 .box-menu .cont .descri{
@@ -120,7 +123,6 @@ aside a{
 }
 
 .box-menu .cont .header p{
-    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
     font-size: 30px;
     color: black;
     
@@ -132,11 +134,6 @@ aside a{
     padding-top: 30px;
     font-size: 30px;
 }
-
-/* .box-menu .cont .item{
-    /* display: flex; 
-} */
-
 
 .box-menu .cont .descri .armas-box{
     width: 100%;
@@ -152,17 +149,9 @@ aside a{
     font-size: 25px;
 }
 
-
-
-/* .box-menu .cont .item #imgs{
-    width: 150px;
-    height: 200px;
-    background-color: chartreuse;
-} */
-
 .box-menu .cont .descri .armas-box .img{
     width: 40%;
-    height: 180px;
+    height: 220px;
     border: 4px gray solid;
     border-radius: 10%;
     transition: 700ms;
