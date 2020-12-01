@@ -51,13 +51,19 @@ aside a{
 }
 
 .armas{
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     display: flex;
     cursor: pointer;
     line-height: 180px;
+    transition: 800ms;
+}
+
+.armas:hover{
+    background-color: rgb(155, 22, 22);
+    transform: scale(1.07);
 }
 
 .armas img{
@@ -164,7 +170,7 @@ aside a{
 }
 
 .box-menu .cont .descri .armas-box .img:hover{
-    transform: scale(1.8);
+    transform: scale(1.7);
     opacity: 0.9;
     border: 0;
     /* margin-bottom: 50px; */
