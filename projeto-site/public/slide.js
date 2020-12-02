@@ -1,64 +1,63 @@
 function sorteia() {
-    for (var i = 0; i < 1; i++) {
 
-        var numero_sorteado = parseInt((Math.random() * 7) + 1);
+    var numero_sorteado = parseInt((Math.random() * 7) + 1);
 
-        var mirage = numero_sorteado == 1;
-        var overpass = numero_sorteado == 2;
-        var inferno = numero_sorteado == 3;
-        var dust2 = numero_sorteado == 4;
-        var nuke = numero_sorteado == 5;
-        var cache = numero_sorteado == 6;
-
-
-        if (mirage) {
-            nome_mapa.innerHTML = 'Mirage';
-            mostra('block','none','none','none','none','none','none');
-            mapmirage();
+    var mirage = numero_sorteado == 1;
+    var overpass = numero_sorteado == 2;
+    var inferno = numero_sorteado == 3;
+    var dust2 = numero_sorteado == 4;
+    var nuke = numero_sorteado == 5;
+    var cache = numero_sorteado == 6;
 
 
-        } else if (overpass) {
-            nome_mapa.innerHTML = 'Overpass';
-            mostra('none','block','none','none','none','none','none');
-            mapoverpass();
-        } else if (inferno) {
-            nome_mapa.innerHTML = 'Inferno';
-            mostra('none','none','block','none','none','none','none');
-            mapInferno();
-        } else if (dust2) {
-            nome_mapa.innerHTML = 'Dust2';
-            mostra('none','none','none','block','none','none','none');
-            mapDust2();
-        } else if (nuke) {
+    if (mirage) {
+        nome_mapa.innerHTML = 'Mirage';
+        mostra('block', 'none', 'none', 'none', 'none', 'none', 'none');
+        mapmirage();
 
-            
-            nome_mapa.innerHTML = 'Nuke';
 
-            mostra('none','none','none','none','block','none','none');
-            mapNuke();
+    } else if (overpass) {
+        nome_mapa.innerHTML = 'Overpass';
+        mostra('none', 'block', 'none', 'none', 'none', 'none', 'none');
+        mapoverpass();
+    } else if (inferno) {
+        nome_mapa.innerHTML = 'Inferno';
+        mostra('none', 'none', 'block', 'none', 'none', 'none', 'none');
+        mapInferno();
+    } else if (dust2) {
+        nome_mapa.innerHTML = 'Dust2';
+        mostra('none', 'none', 'none', 'block', 'none', 'none', 'none');
+        mapDust2();
+    } else if (nuke) {
 
-        } else if (cache) {
 
-            
-            nome_mapa.innerHTML = 'Cache';
+        nome_mapa.innerHTML = 'Nuke';
 
-            mostra('none','none','none','none','none','block','none');
-            mapCache();
+        mostra('none', 'none', 'none', 'none', 'block', 'none', 'none');
+        mapNuke();
 
-        } else {
+    } else if (cache) {
 
-            
-            nome_mapa.innerHTML = 'Train';
 
-            mostra('none','none','none','none','none','none','block');
-            mapTrain();
+        nome_mapa.innerHTML = 'Cache';
 
-        }
+        mostra('none', 'none', 'none', 'none', 'none', 'block', 'none');
+        mapCache();
+
+    } else {
+
+
+        nome_mapa.innerHTML = 'Train';
+
+        mostra('none', 'none', 'none', 'none', 'none', 'none', 'block');
+        mapTrain();
+
     }
 }
 
 
-function mostra(a,b,c,d,e,f,g) {
+
+function mostra(a, b, c, d, e, f, g) {
     img_mapas.style.display = a;
     img_mapas2.style.display = b;
     img_mapas3.style.display = c;
@@ -156,32 +155,32 @@ function infernoB() {
 
 
 
-function mapDust2(){
+function mapDust2() {
     img_mapas4.src = './imgs/map-d2.jpg';
     setTimeout("d2A()", intervalo);
 }
 
-function d2A(){
+function d2A() {
     img_mapas4.src = './imgs/d2-bA.jpg';
     setTimeout("d2Fundo()", intervalo);
 }
 
-function d2Fundo(){
+function d2Fundo() {
     img_mapas4.src = './imgs/d2-fundo.jpg';
     setTimeout("d2meioTR()", intervalo);
 }
 
-function d2meioTR(){
+function d2meioTR() {
     img_mapas4.src = './imgs/d2-meioTR.jpg';
     setTimeout("d2meioCT()", intervalo);
 }
 
-function d2meioCT(){
+function d2meioCT() {
     img_mapas4.src = './imgs/d2-meioCT.jpg';
     setTimeout("d2B()", intervalo);
 }
 
-function d2B(){
+function d2B() {
     img_mapas4.src = './imgs/d2-bB.jpg';
     setTimeout("mapDust2()", intervalo);
 }
@@ -191,27 +190,27 @@ function d2B(){
 
 
 
-function mapNuke(){
+function mapNuke() {
     img_mapas5.src = './imgs/map-nuke.jpg';
     setTimeout("nukeA()", intervalo);
 }
 
-function nukeA(){
+function nukeA() {
     img_mapas5.src = './imgs/nuke-bA.jpg';
     setTimeout("nukeMiolo()", intervalo);
 }
 
-function nukeMiolo(){
+function nukeMiolo() {
     img_mapas5.src = './imgs/nuke-miolo.jpg';
     setTimeout("nukeFora()", intervalo);
 }
 
-function nukeFora(){
+function nukeFora() {
     img_mapas5.src = './imgs/nuke-fora.jpg';
     setTimeout("nukeB()", intervalo);
 }
 
-function nukeB(){
+function nukeB() {
     img_mapas5.src = './imgs/nuke-bB.jpg';
     setTimeout("mapNuke()", intervalo);
 }
@@ -219,27 +218,27 @@ function nukeB(){
 
 
 
-function mapCache(){
+function mapCache() {
     img_mapas6.src = './imgs/map-cache.jpg';
     setTimeout("cacheA()", intervalo);
 }
 
-function cacheA(){
+function cacheA() {
     img_mapas6.src = './imgs/cache-bA.jpg';
     setTimeout("cacheTR()", intervalo);
 }
 
-function cacheTR(){
+function cacheTR() {
     img_mapas6.src = './imgs/cache-meioTR.jpg';
     setTimeout("cacheMeio()", intervalo);
 }
 
-function cacheMeio(){
+function cacheMeio() {
     img_mapas6.src = './imgs/cache-meio.jpg';
     setTimeout("cacheB()", intervalo);
 }
 
-function cacheB(){
+function cacheB() {
     img_mapas6.src = './imgs/cache-bB.jpg';
     setTimeout("mapCache()", intervalo);
 }
@@ -247,23 +246,23 @@ function cacheB(){
 
 
 
-function mapTrain(){
+function mapTrain() {
     img_mapas7.src = './imgs/map-train.jpg';
     setTimeout("trainA()", intervalo);
 }
 
 
-function trainA(){
+function trainA() {
     img_mapas7.src = './imgs/train-bA.jpg';
     setTimeout("trainFundo()", intervalo);
 }
 
-function trainFundo(){
+function trainFundo() {
     img_mapas7.src = './imgs/train-fundo.jpg';
     setTimeout("trainB()", intervalo);
 }
 
-function trainB(){
+function trainB() {
     img_mapas7.src = './imgs/train-bB.jpg';
     setTimeout("mapTrain()", intervalo);
 }
