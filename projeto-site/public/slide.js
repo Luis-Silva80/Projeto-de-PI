@@ -13,7 +13,7 @@ function sorteia() {
 
         if (mirage) {
             nome_mapa.innerHTML = 'Mirage';
-            mostra('block','none','none','none','none','none','none');8
+            mostra('block','none','none','none','none','none','none');
             mapmirage();
 
 
