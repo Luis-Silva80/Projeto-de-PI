@@ -64,6 +64,7 @@
     transition-duration: 600ms;
     border-radius: 20px;
     background: url(../imgs/interrogacao.jpg) center;
+    margin-left: 30px;
 }
 
 .cont .bt button:hover{
