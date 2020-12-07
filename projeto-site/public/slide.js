@@ -91,7 +91,8 @@ function mirageB() {
 }
 function mirageCold() {
     img_mapas.src = './imgs/mirage-bB-cold.jpg';
-    setTimeout("mapmirage()", intervalo);
+    setTimeout("mapmira
+    ge()", intervalo);
 }
 
 
